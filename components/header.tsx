@@ -64,22 +64,14 @@ export default function Header() {
           {/* Logo / Branding */}
           <button
             onClick={() => window.location.reload()}
-            className="flex items-center gap-3 hover:opacity-80 transition-opacity cursor-pointer"
+            className="hover:opacity-80 transition-opacity cursor-pointer"
             aria-label="Refresh page"
           >
-            <div className={`flex items-center gap-3 ${isRTL ? "order-2" : ""}`}>
-              <div className="w-10 h-10 flex items-center justify-center">
-                <img
-                  src={theme === "light" ? "/Dark Mood Logo.png" : "/White Mood Logo.png"}
-                  alt="Colors Mood Logo"
-                  className="w-full h-full object-contain"
-                />
-              </div>
-              <div className="flex flex-col">
-                <h1 className="text-xl font-bold text-[#1a1a1a] dark:text-white">Colors Mood</h1>
-                <p className="text-xs text-gray-600 dark:text-gray-400">Printing Solutions</p>
-              </div>
-            </div>
+            <img
+              src={theme === "light" ? "/White Mood Logo.png" : "/Dark Mood Logo.png"}
+              alt="Colors Mood Logo"
+              className="h-22 w-auto object-contain"
+            />
           </button>
 
           {/* Desktop Navigation */}
