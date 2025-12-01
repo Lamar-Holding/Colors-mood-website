@@ -62,15 +62,25 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo / Branding */}
-          <div className={`flex items-center gap-3 ${isRTL ? "order-2" : ""}`}>
-            <div className="w-10 h-10 bg-[#d4af37] rounded flex items-center justify-center">
-              <span className="text-[#0f0f0f] font-bold text-lg">CM</span>
+          <button
+            onClick={() => window.location.reload()}
+            className="flex items-center gap-3 hover:opacity-80 transition-opacity cursor-pointer"
+            aria-label="Refresh page"
+          >
+            <div className={`flex items-center gap-3 ${isRTL ? "order-2" : ""}`}>
+              <div className="w-10 h-10 flex items-center justify-center">
+                <img
+                  src={theme === "light" ? "/Dark Mood Logo.png" : "/White Mood Logo.png"}
+                  alt="Colors Mood Logo"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <div className="flex flex-col">
+                <h1 className="text-xl font-bold text-[#1a1a1a] dark:text-white">Colors Mood</h1>
+                <p className="text-xs text-gray-600 dark:text-gray-400">Printing Solutions</p>
+              </div>
             </div>
-            <div className="flex flex-col">
-              <h1 className="text-xl font-bold text-[#1a1a1a] dark:text-white">Colors Mood</h1>
-              <p className="text-xs text-gray-600 dark:text-gray-400">Printing Solutions</p>
-            </div>
-          </div>
+          </button>
 
           {/* Desktop Navigation */}
           <nav className={`hidden md:flex gap-1 ${isRTL ? "order-1" : ""}`}>
