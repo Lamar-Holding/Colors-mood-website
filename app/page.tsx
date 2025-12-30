@@ -28,7 +28,7 @@ export default function Home() {
     return (
       <div className="w-full h-screen flex items-center justify-center bg-white dark:bg-[#0f0f0f]">
         <div className="text-center">
-          <div className="w-12 h-12 border-4 border-gray-200 border-t-[#d4af37] rounded-full animate-spin mx-auto mb-4" />
+          <div className="w-12 h-12 border-4 border-gray-200 border-t-[#e6ff01] rounded-full animate-spin mx-auto mb-4" />
           <p className="text-gray-600 dark:text-gray-400">Loading...</p>
         </div>
       </div>

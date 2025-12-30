@@ -50,7 +50,7 @@ export default function VehicleSection() {
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl md:text-5xl font-bold text-[#1a1a1a] dark:text-white mb-4">{t("vehicleTitle")}</h2>
           <p className="text-gray-600 dark:text-gray-400">{t("vehicleSubtitle")}</p>
-          <div className="w-16 h-1 bg-[#d4af37] mx-auto rounded-full" />
+          <div className="w-16 h-1 bg-[#e6ff01] mx-auto rounded-full" />
         </div>
 
         {/* Vehicle Types Gallery */}
@@ -73,12 +73,12 @@ export default function VehicleSection() {
 
         {/* Signage Services */}
         <div className="bg-gradient-to-r from-[#1a1a1a] to-[#2d2d2d] text-white p-12 rounded-lg">
-          <h3 className="text-3xl font-bold mb-6 text-[#d4af37]">{t("vehicleSignage")}</h3>
+          <h3 className="text-3xl font-bold mb-6 text-[#e6ff01]">{t("vehicleSignage")}</h3>
           <p className="text-lg text-gray-200 mb-6">{t("vehicleSignageDesc")}</p>
           <ul className="grid md:grid-cols-2 gap-4">
             {signageItems.map((item, idx) => (
               <li key={idx} className="flex gap-3 items-center">
-                <span className="w-2 h-2 bg-[#d4af37] rounded-full" />
+                <span className="w-2 h-2 bg-[#e6ff01] rounded-full" />
                 {item}
               </li>
             ))}

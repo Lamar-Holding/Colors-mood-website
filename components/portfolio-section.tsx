@@ -143,7 +143,7 @@ export default function PortfolioSection() {
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl md:text-5xl font-bold text-[#1a1a1a] dark:text-white mb-4">{t("portfolioTitle")}</h2>
           <p className="text-gray-600 dark:text-gray-400">{t("portfolioSubtitle")}</p>
-          <div className="w-16 h-1 bg-[#d4af37] mx-auto rounded-full mt-4" />
+          <div className="w-16 h-1 bg-[#e6ff01] mx-auto rounded-full mt-4" />
         </div>
 
         {/* Portfolio Grid */}
@@ -164,7 +164,7 @@ export default function PortfolioSection() {
                 />
                 <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-40 transition-opacity duration-300 flex items-center justify-center">
                   <button
-                    className="px-6 py-2 bg-[#d4af37] text-[#0f0f0f] font-bold rounded hover:bg-[#b8941f] transition-colors"
+                    className="px-6 py-2 bg-[#e6ff01] text-[#0f0f0f] font-bold rounded hover:bg-[#e6ff01] transition-colors"
                     aria-label={`View ${project.title} project details`}
                   >
                     {t("portfolioViewMore")}
@@ -175,7 +175,7 @@ export default function PortfolioSection() {
               <p className="text-sm text-gray-600 dark:text-gray-400">{project.description[language]}</p>
               <div className="flex flex-wrap gap-2 mt-3">
                 {project.tags[language].map((tag, i) => (
-                  <span key={i} className="inline-block px-2 py-1 text-xs bg-[#d4af37]/10 text-[#d4af37] rounded">
+                  <span key={i} className="inline-block px-2 py-1 text-xs bg-[#e6ff01]/10 text-[#e6ff01] rounded">
                     {tag}
                   </span>
                 ))}
@@ -200,7 +200,7 @@ export default function PortfolioSection() {
           >
             <button
               onClick={() => setSelectedProject(null)}
-              className="float-right p-2 hover:text-[#d4af37] transition-colors"
+              className="float-right p-2 hover:text-[#e6ff01] transition-colors"
               aria-label="Close modal"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -218,13 +218,13 @@ export default function PortfolioSection() {
               <h2 id="modal-title" className="text-2xl font-bold text-[#1a1a1a] dark:text-white mb-2">
                 {selectedProject.title[language]}
               </h2>
-              <p className="text-sm text-[#d4af37] mb-4">
+              <p className="text-sm text-[#e6ff01] mb-4">
                 {t("portfolioSourceNote")} — Page {selectedProject.page}
               </p>
               <p className="text-gray-700 dark:text-gray-300 mb-4">{selectedProject.description[language]}</p>
               <div className="flex flex-wrap gap-2">
                 {selectedProject.tags[language].map((tag, i) => (
-                  <span key={i} className="inline-block px-3 py-1 bg-[#d4af37]/10 text-[#d4af37] rounded-full text-sm">
+                  <span key={i} className="inline-block px-3 py-1 bg-[#e6ff01]/10 text-[#e6ff01] rounded-full text-sm">
                     {tag}
                   </span>
                 ))}

@@ -85,7 +85,7 @@ export default function AccessibilityWidget() {
       {/* Toggle Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-12 h-12 bg-[#d4af37] rounded-full flex items-center justify-center hover:bg-[#b8941f] transition-colors shadow-lg"
+        className="w-12 h-12 bg-[#e6ff01] rounded-full flex items-center justify-center hover:bg-[#e6ff01] transition-colors shadow-lg"
         aria-label="Open accessibility menu"
         aria-expanded={isOpen}
       >

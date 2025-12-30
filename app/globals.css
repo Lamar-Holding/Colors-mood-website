@@ -4,7 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --color-brand-gold: #d4af37;
+  --color-brand-gold: #e6ff01;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -224,12 +224,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #d4af37;
+  background-color: #e6ff01;
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #b8941f;
+  background-color: #e6ff01;
 }
 
 [dir="rtl"] {
@@ -243,23 +243,23 @@ body {
 }
 
 :focus-visible {
-  outline: 2px solid #d4af37;
+  outline: 2px solid #e6ff01;
   outline-offset: 2px;
 }
 
 button:focus-visible {
-  outline: 2px solid #d4af37;
+  outline: 2px solid #e6ff01;
   outline-offset: 2px;
 }
 
 a:focus-visible {
-  outline: 2px solid #d4af37;
+  outline: 2px solid #e6ff01;
   outline-offset: 2px;
 }
 
 input:focus-visible,
 textarea:focus-visible {
-  outline: 2px solid #d4af37;
+  outline: 2px solid #e6ff01;
   outline-offset: 2px;
 }
 
@@ -267,7 +267,7 @@ textarea:focus-visible {
   position: absolute;
   top: -40px;
   left: 0;
-  background: #d4af37;
+  background: #e6ff01;
   color: #0f0f0f;
   padding: 8px;
   z-index: 100;
@@ -280,22 +280,22 @@ textarea:focus-visible {
 @layer components {
   .btn-primary {
     @apply px-6 py-3 font-bold rounded-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed;
-    background-color: #d4af37;
+    background-color: #e6ff01;
     color: #0f0f0f;
   }
 
   .btn-primary:hover {
-    background-color: #b8941f;
+    background-color: #e6ff01;
   }
 
   .btn-secondary {
     @apply px-6 py-3 font-bold rounded-lg transition-all duration-300;
-    border: 2px solid #d4af37;
-    color: #d4af37;
+    border: 2px solid #e6ff01;
+    color: #e6ff01;
   }
 
   .btn-secondary:hover {
-    background-color: #d4af37;
+    background-color: #e6ff01;
     color: #0f0f0f;
   }
 
@@ -311,7 +311,7 @@ textarea:focus-visible {
   .section-divider {
     width: 4rem;
     height: 0.25rem;
-    background-color: #d4af37;
+    background-color: #e6ff01;
     margin: 1rem auto;
     border-radius: 9999px;
   }

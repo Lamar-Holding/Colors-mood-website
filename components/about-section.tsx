@@ -19,7 +19,7 @@ export default function AboutSection() {
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl md:text-5xl font-bold text-[#1a1a1a] dark:text-white mb-4">{t("aboutTitle")}</h2>
-          <div className="w-16 h-1 bg-[#d4af37] mx-auto rounded-full" />
+          <div className="w-16 h-1 bg-[#e6ff01] mx-auto rounded-full" />
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 mb-16">
@@ -28,18 +28,18 @@ export default function AboutSection() {
             <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">{t("aboutCompany")}</p>
 
             <div className="flex gap-2 text-sm text-gray-600 dark:text-gray-400">
-              <span className="font-semibold text-[#d4af37]">📍</span>
+              <span className="font-semibold text-[#e6ff01]">📍</span>
               <span>{t("aboutLocation")}</span>
             </div>
 
             {/* Mission & Vision Cards */}
             <div className="space-y-4 pt-6">
-              <div className="p-5 bg-gray-50 dark:bg-gray-900 rounded-lg border-l-4 border-[#d4af37]">
+              <div className="p-5 bg-gray-50 dark:bg-gray-900 rounded-lg border-l-4 border-[#e6ff01]">
                 <h3 className="font-bold text-[#1a1a1a] dark:text-white mb-2">{t("missionTitle")}</h3>
                 <p className="text-sm text-gray-700 dark:text-gray-300">{t("mission")}</p>
               </div>
 
-              <div className="p-5 bg-gray-50 dark:bg-gray-900 rounded-lg border-l-4 border-[#d4af37]">
+              <div className="p-5 bg-gray-50 dark:bg-gray-900 rounded-lg border-l-4 border-[#e6ff01]">
                 <h3 className="font-bold text-[#1a1a1a] dark:text-white mb-2">{t("visionTitle")}</h3>
                 <p className="text-sm text-gray-700 dark:text-gray-300">{t("vision")}</p>
               </div>
@@ -49,11 +49,11 @@ export default function AboutSection() {
           {/* Right Content - Why Choose Us */}
           <div className={`animate-slide-in-right ${isRTL ? "md:order-1" : ""}`}>
             <div className="bg-gradient-to-br from-[#1a1a1a] to-[#2d2d2d] p-8 rounded-lg text-white">
-              <h3 className="text-2xl font-bold mb-6 text-[#d4af37]">{t("whyChooseUs")}</h3>
+              <h3 className="text-2xl font-bold mb-6 text-[#e6ff01]">{t("whyChooseUs")}</h3>
               <ul className="space-y-4">
                 {whyChooseItems.map((item, idx) => (
                   <li key={idx} className="flex gap-3">
-                    <span className="flex-shrink-0 w-6 h-6 bg-[#d4af37] rounded-full flex items-center justify-center text-[#0f0f0f] font-bold text-sm">
+                    <span className="flex-shrink-0 w-6 h-6 bg-[#e6ff01] rounded-full flex items-center justify-center text-[#0f0f0f] font-bold text-sm">
                       ✓
                     </span>
                     <span className="text-gray-200">{item}</span>

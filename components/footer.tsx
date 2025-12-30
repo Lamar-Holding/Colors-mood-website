@@ -14,11 +14,11 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <h3 className="text-2xl font-bold text-[#d4af37] mb-2">Colors Mood</h3>
+            <h3 className="text-2xl font-bold text-[#e6ff01] mb-2">Colors Mood</h3>
             <a 
               href={language === "ar" ? "/Colors Mood - Profile Arabic.pdf" : "/Colors Mood - Profile English.pdf"} 
               download 
-              className="text-gray-400 text-sm font-semibold hover:text-[#d4af37] transition inline-block"
+              className="text-gray-400 text-sm font-semibold hover:text-[#e6ff01] transition inline-block"
             >
               {t("footerSourceNote")}
             </a>
@@ -29,17 +29,17 @@ export default function Footer() {
             <h4 className="font-bold text-white mb-4">{t("navServices")}</h4>
             <ul className="space-y-2 text-gray-400 text-sm">
               <li>
-                <a href="#services" className="hover:text-[#d4af37] transition">
+                <a href="#services" className="hover:text-[#e6ff01] transition">
                   {t("serviceVehicleWraps")}
                 </a>
               </li>
               <li>
-                <a href="#services" className="hover:text-[#d4af37] transition">
+                <a href="#services" className="hover:text-[#e6ff01] transition">
                   {t("serviceBanners")}
                 </a>
               </li>
               <li>
-                <a href="#services" className="hover:text-[#d4af37] transition">
+                <a href="#services" className="hover:text-[#e6ff01] transition">
                   {t("serviceSignage")}
                 </a>
               </li>
@@ -51,17 +51,17 @@ export default function Footer() {
             <h4 className="font-bold text-white mb-4">{t("aboutTitle")}</h4>
             <ul className="space-y-2 text-gray-400 text-sm">
               <li>
-                <a href="#about" className="hover:text-[#d4af37] transition">
+                <a href="#about" className="hover:text-[#e6ff01] transition">
                   {t("aboutTitle")}
                 </a>
               </li>
               <li>
-                <a href="#portfolio" className="hover:text-[#d4af37] transition">
+                <a href="#portfolio" className="hover:text-[#e6ff01] transition">
                   {t("portfolioTitle")}
                 </a>
               </li>
               <li>
-                <a href="#contact" className="hover:text-[#d4af37] transition">
+                <a href="#contact" className="hover:text-[#e6ff01] transition">
                   {t("contactTitle")}
                 </a>
               </li>
@@ -74,13 +74,13 @@ export default function Footer() {
             <ul className="space-y-2 text-gray-400 text-sm">
               <li className="flex gap-2">
                 <span>📞</span>
-                <a href="tel:+966544927409" className="hover:text-[#d4af37] transition">
+                <a href="tel:+966544927409" className="hover:text-[#e6ff01] transition">
                   {t("contactPhone")}
                 </a>
               </li>
               <li className="flex gap-2">
                 <span>✉️</span>
-                <a href="mailto:Sales.dept@colorsmood.com.sa" className="hover:text-[#d4af37] transition">
+                <a href="mailto:Sales.dept@colorsmood.com.sa" className="hover:text-[#e6ff01] transition">
                   {t("contactEmail")}
                 </a>
               </li>

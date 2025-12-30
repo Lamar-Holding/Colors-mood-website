@@ -45,7 +45,7 @@ export default function PricingSection() {
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl md:text-5xl font-bold text-[#1a1a1a] dark:text-white mb-4">{t("pricingTitle")}</h2>
-          <div className="w-16 h-1 bg-[#d4af37] mx-auto rounded-full mb-6" />
+          <div className="w-16 h-1 bg-[#e6ff01] mx-auto rounded-full mb-6" />
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">{t("pricingNote")}</p>
         </div>
 
@@ -57,7 +57,7 @@ export default function PricingSection() {
                 <th className="px-6 py-4 text-left text-white font-bold">{t("pricingService")}</th>
                 <th className="px-6 py-4 text-left text-white font-bold">{t("pricingMaterial")}</th>
                 <th className="px-6 py-4 text-left text-white font-bold">{t("pricingWarranty")}</th>
-                <th className="px-6 py-4 text-left text-[#d4af37] font-bold">{t("pricingPrice")}</th>
+                <th className="px-6 py-4 text-left text-[#e6ff01] font-bold">{t("pricingPrice")}</th>
               </tr>
             </thead>
             <tbody>
@@ -69,7 +69,7 @@ export default function PricingSection() {
                   <td className="px-6 py-4 text-gray-700 dark:text-gray-300">{row.service}</td>
                   <td className="px-6 py-4 text-gray-700 dark:text-gray-300">{row.material}</td>
                   <td className="px-6 py-4 text-gray-700 dark:text-gray-300">{row.warranty}</td>
-                  <td className="px-6 py-4 font-bold text-[#d4af37]">{row.price} / sqm</td>
+                  <td className="px-6 py-4 font-bold text-[#e6ff01]">{row.price} / sqm</td>
                 </tr>
               ))}
             </tbody>

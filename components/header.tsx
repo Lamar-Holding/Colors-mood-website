@@ -82,8 +82,8 @@ export default function Header() {
                 onClick={() => scrollToSection(item.id)}
                 className={`px-3 py-2 text-sm font-medium rounded transition-colors duration-200 ${
                   activeSection === item.id
-                    ? "text-[#d4af37] bg-gray-100 dark:bg-gray-900"
-                    : "text-gray-700 dark:text-gray-300 hover:text-[#d4af37]"
+                    ? "text-[#e6ff01] bg-gray-100 dark:bg-gray-900"
+                    : "text-gray-700 dark:text-gray-300 hover:text-[#e6ff01]"
                 }`}
               >
                 {item.label}
@@ -98,7 +98,7 @@ export default function Header() {
               <button
                 onClick={() => changeLanguage("en")}
                 className={`px-3 py-1 rounded text-sm font-medium transition-colors ${
-                  language === "en" ? "bg-[#d4af37] text-[#0f0f0f]" : "text-gray-600 dark:text-gray-400"
+                  language === "en" ? "bg-[#e6ff01] text-[#0f0f0f]" : "text-gray-600 dark:text-gray-400"
                 }`}
                 aria-label="Switch to English"
               >
@@ -107,7 +107,7 @@ export default function Header() {
               <button
                 onClick={() => changeLanguage("ar")}
                 className={`px-3 py-1 rounded text-sm font-medium transition-colors ${
-                  language === "ar" ? "bg-[#d4af37] text-[#0f0f0f]" : "text-gray-600 dark:text-gray-400"
+                  language === "ar" ? "bg-[#e6ff01] text-[#0f0f0f]" : "text-gray-600 dark:text-gray-400"
                 }`}
                 aria-label="Switch to Arabic"
               >
@@ -118,7 +118,7 @@ export default function Header() {
             {/* Theme Toggle */}
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-lg bg-gray-100 dark:bg-gray-900 text-gray-700 dark:text-gray-300 hover:text-[#d4af37] transition-colors"
+              className="p-2 rounded-lg bg-gray-100 dark:bg-gray-900 text-gray-700 dark:text-gray-300 hover:text-[#e6ff01] transition-colors"
               aria-label={theme === "light" ? "Switch to dark mode" : "Switch to light mode"}
             >
               {theme === "light" ? (
@@ -164,8 +164,8 @@ export default function Header() {
                   onClick={() => scrollToSection(item.id)}
                   className={`px-4 py-2 text-left rounded transition-colors ${
                     activeSection === item.id
-                      ? "text-[#d4af37] bg-gray-100 dark:bg-gray-900"
-                      : "text-gray-700 dark:text-gray-300 hover:text-[#d4af37]"
+                      ? "text-[#e6ff01] bg-gray-100 dark:bg-gray-900"
+                      : "text-gray-700 dark:text-gray-300 hover:text-[#e6ff01]"
                   }`}
                 >
                   {item.label}

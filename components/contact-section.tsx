@@ -67,7 +67,7 @@ export default function ContactSection() {
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl md:text-5xl font-bold text-[#1a1a1a] dark:text-white mb-4">{t("contactTitle")}</h2>
           <p className="text-gray-600 dark:text-gray-400">{t("contactNote")}</p>
-          <div className="w-16 h-1 bg-[#d4af37] mx-auto rounded-full mt-4" />
+          <div className="w-16 h-1 bg-[#e6ff01] mx-auto rounded-full mt-4" />
         </div>
 
         <div className="grid md:grid-cols-2 gap-12">
@@ -78,7 +78,7 @@ export default function ContactSection() {
                 <span className="text-3xl">📞</span>
                 <div>
                   <h3 className="font-bold text-[#1a1a1a] dark:text-white mb-1">{t("contactTitle")}</h3>
-                  <a href="tel:+966544927409" className="text-[#d4af37] hover:text-[#b8941f] transition">
+                  <a href="tel:+966544927409" className="text-[#e6ff01] hover:text-[#e6ff01] transition">
                     {t("contactPhone")}
                   </a>
                 </div>
@@ -90,7 +90,7 @@ export default function ContactSection() {
                   <h3 className="font-bold text-[#1a1a1a] dark:text-white mb-1">Email</h3>
                   <a
                     href="mailto:Sales.dept@colorsmood.com.sa"
-                    className="text-[#d4af37] hover:text-[#b8941f] transition"
+                    className="text-[#e6ff01] hover:text-[#e6ff01] transition"
                   >
                     {t("contactEmail")}
                   </a>
@@ -117,7 +117,7 @@ export default function ContactSection() {
                 type="text"
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white rounded-lg focus:outline-none focus:border-[#d4af37] transition"
+                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white rounded-lg focus:outline-none focus:border-[#e6ff01] transition"
                 placeholder="Your name"
               />
             </div>
@@ -130,7 +130,7 @@ export default function ContactSection() {
                 type="email"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white rounded-lg focus:outline-none focus:border-[#d4af37] transition"
+                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white rounded-lg focus:outline-none focus:border-[#e6ff01] transition"
                 placeholder="your@email.com"
               />
             </div>
@@ -143,7 +143,7 @@ export default function ContactSection() {
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                 rows={4}
-                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white rounded-lg focus:outline-none focus:border-[#d4af37] transition resize-none"
+                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white rounded-lg focus:outline-none focus:border-[#e6ff01] transition resize-none"
                 placeholder="Your message..."
               />
             </div>
@@ -163,7 +163,7 @@ export default function ContactSection() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full px-6 py-3 bg-[#d4af37] text-[#0f0f0f] font-bold rounded-lg hover:bg-[#b8941f] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full px-6 py-3 bg-[#e6ff01] text-[#0f0f0f] font-bold rounded-lg hover:bg-[#e6ff01] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {loading ? t("formSending") : t("contactFormSubmit")}
             </button>

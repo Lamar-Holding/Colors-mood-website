@@ -66,7 +66,7 @@ export default function ServicesSection() {
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl md:text-5xl font-bold text-[#1a1a1a] dark:text-white mb-4">{t("servicesTitle")}</h2>
           <p className="text-gray-600 dark:text-gray-400">{t("servicesSubtitle")}</p>
-          <div className="w-16 h-1 bg-[#d4af37] mx-auto rounded-full mt-4" />
+          <div className="w-16 h-1 bg-[#e6ff01] mx-auto rounded-full mt-4" />
         </div>
 
         {/* Services Grid */}
@@ -75,12 +75,12 @@ export default function ServicesSection() {
             <div key={service.id} className="animate-fade-in-up" style={{ animationDelay: `${idx * 0.1}s` }}>
               <button
                 onClick={() => setExpanded(expanded === service.id ? null : service.id)}
-                className="w-full p-6 bg-white dark:bg-[#1a1a1a] rounded-lg border border-gray-200 dark:border-gray-800 hover:border-[#d4af37] transition-all duration-300 text-left cursor-pointer group"
+                className="w-full p-6 bg-white dark:bg-[#1a1a1a] rounded-lg border border-gray-200 dark:border-gray-800 hover:border-[#e6ff01] transition-all duration-300 text-left cursor-pointer group"
               >
                 <div className="flex items-start gap-4">
                   <span className="text-3xl">{service.icon}</span>
                   <div className="flex-1">
-                    <h3 className="font-bold text-[#1a1a1a] dark:text-white group-hover:text-[#d4af37] transition-colors">
+                    <h3 className="font-bold text-[#1a1a1a] dark:text-white group-hover:text-[#e6ff01] transition-colors">
                       {t(service.titleKey)}
                     </h3>
                     {expanded === service.id && (
@@ -88,7 +88,7 @@ export default function ServicesSection() {
                     )}
                   </div>
                   <svg
-                    className={`w-5 h-5 text-[#d4af37] transition-transform ${expanded === service.id ? "rotate-180" : ""}`}
+                    className={`w-5 h-5 text-[#e6ff01] transition-transform ${expanded === service.id ? "rotate-180" : ""}`}
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >

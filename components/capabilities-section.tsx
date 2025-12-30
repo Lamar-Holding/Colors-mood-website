@@ -35,7 +35,7 @@ export default function CapabilitiesSection() {
             {t("capabilitiesTitle")}
           </h2>
           <p className="text-gray-600 dark:text-gray-400">{t("capabilitiesSubtitle")}</p>
-          <div className="w-16 h-1 bg-[#d4af37] mx-auto rounded-full mt-4" />
+          <div className="w-16 h-1 bg-[#e6ff01] mx-auto rounded-full mt-4" />
         </div>
 
         {/* Capabilities Grid */}
@@ -43,7 +43,7 @@ export default function CapabilitiesSection() {
           {capabilities.map((cap, idx) => (
             <div
               key={idx}
-              className="text-center p-6 bg-gray-50 dark:bg-gray-900 rounded-lg hover:shadow-lg hover:border-[#d4af37] border border-transparent transition-all duration-300 animate-fade-in-up"
+              className="text-center p-6 bg-gray-50 dark:bg-gray-900 rounded-lg hover:shadow-lg hover:border-[#e6ff01] border border-transparent transition-all duration-300 animate-fade-in-up"
               style={{ animationDelay: `${idx * 0.1}s` }}
             >
               <span className="text-4xl block mb-3">{cap.icon}</span>
@@ -54,7 +54,7 @@ export default function CapabilitiesSection() {
 
         {/* Quality Assurance */}
         <div className="bg-gradient-to-r from-[#1a1a1a] to-[#2d2d2d] text-white p-12 rounded-lg">
-          <h3 className="text-3xl font-bold mb-8 text-[#d4af37]">{t("qualityTitle")}</h3>
+          <h3 className="text-3xl font-bold mb-8 text-[#e6ff01]">{t("qualityTitle")}</h3>
           <div className="grid md:grid-cols-4 gap-6">
             {qualityPoints.map((point, idx) => (
               <div key={idx} className="flex gap-3">
