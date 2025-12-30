@@ -78,7 +78,10 @@ export default function ContactSection() {
                 <span className="text-3xl">📞</span>
                 <div>
                   <h3 className="font-bold text-[#1a1a1a] dark:text-white mb-1">{t("contactTitle")}</h3>
-                  <a href="tel:+966544927409" className="text-[#e6ff01] hover:text-[#e6ff01] transition">
+                  <a
+                    href="tel:+966544927409"
+                    className="inline-flex items-center rounded-md bg-[#e6ff01] px-2 py-1 font-semibold text-[#0f0f0f] transition"
+                  >
                     {t("contactPhone")}
                   </a>
                 </div>
@@ -90,7 +93,7 @@ export default function ContactSection() {
                   <h3 className="font-bold text-[#1a1a1a] dark:text-white mb-1">Email</h3>
                   <a
                     href="mailto:Sales.dept@colorsmood.com.sa"
-                    className="text-[#e6ff01] hover:text-[#e6ff01] transition"
+                    className="inline-flex items-center rounded-md bg-[#e6ff01] px-2 py-1 font-semibold text-[#0f0f0f] transition"
                   >
                     {t("contactEmail")}
                   </a>

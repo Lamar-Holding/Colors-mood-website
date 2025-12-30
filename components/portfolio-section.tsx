@@ -175,7 +175,10 @@ export default function PortfolioSection() {
               <p className="text-sm text-gray-600 dark:text-gray-400">{project.description[language]}</p>
               <div className="flex flex-wrap gap-2 mt-3">
                 {project.tags[language].map((tag, i) => (
-                  <span key={i} className="inline-block px-2 py-1 text-xs bg-[#e6ff01]/10 text-[#e6ff01] rounded">
+                  <span
+                    key={i}
+                    className="inline-block rounded bg-[#e6ff01] px-2 py-1 text-xs font-semibold text-[#0f0f0f]"
+                  >
                     {tag}
                   </span>
                 ))}
@@ -218,13 +221,18 @@ export default function PortfolioSection() {
               <h2 id="modal-title" className="text-2xl font-bold text-[#1a1a1a] dark:text-white mb-2">
                 {selectedProject.title[language]}
               </h2>
-              <p className="text-sm text-[#e6ff01] mb-4">
-                {t("portfolioSourceNote")} — Page {selectedProject.page}
+              <p className="mb-4 text-sm">
+                <span className="inline-flex items-center rounded-md bg-[#e6ff01] px-2 py-1 text-[#0f0f0f]">
+                  {t("portfolioSourceNote")} — Page {selectedProject.page}
+                </span>
               </p>
               <p className="text-gray-700 dark:text-gray-300 mb-4">{selectedProject.description[language]}</p>
               <div className="flex flex-wrap gap-2">
                 {selectedProject.tags[language].map((tag, i) => (
-                  <span key={i} className="inline-block px-3 py-1 bg-[#e6ff01]/10 text-[#e6ff01] rounded-full text-sm">
+                  <span
+                    key={i}
+                    className="inline-block rounded-full bg-[#e6ff01] px-3 py-1 text-sm font-semibold text-[#0f0f0f]"
+                  >
                     {tag}
                   </span>
                 ))}

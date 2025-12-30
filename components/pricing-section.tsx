@@ -69,7 +69,11 @@ export default function PricingSection() {
                   <td className="px-6 py-4 text-gray-700 dark:text-gray-300">{row.service}</td>
                   <td className="px-6 py-4 text-gray-700 dark:text-gray-300">{row.material}</td>
                   <td className="px-6 py-4 text-gray-700 dark:text-gray-300">{row.warranty}</td>
-                  <td className="px-6 py-4 font-bold text-[#e6ff01]">{row.price} / sqm</td>
+                  <td className="px-6 py-4 font-bold">
+                    <span className="inline-flex items-center rounded-md bg-[#e6ff01] px-2 py-1 text-[#0f0f0f]">
+                      {row.price} / sqm
+                    </span>
+                  </td>
                 </tr>
               ))}
             </tbody>
