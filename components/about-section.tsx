@@ -22,32 +22,32 @@ export default function AboutSection() {
           <div className="w-16 h-1 bg-[#e6ff01] mx-auto rounded-full" />
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 mb-16">
-          {/* Left Content */}
-          <div className={`space-y-6 animate-slide-in-left ${isRTL ? "md:order-2" : ""}`}>
-            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">{t("aboutCompany")}</p>
+        <div className="mb-12 text-center animate-fade-in-up">
+          <p className="mx-auto max-w-3xl text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+            {t("aboutCompany")}
+          </p>
+          <div className="mt-4 flex items-center justify-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+            <span className="font-semibold text-[#e6ff01]">📍</span>
+            <span>{t("aboutLocation")}</span>
+          </div>
+        </div>
 
-            <div className="flex gap-2 text-sm text-gray-600 dark:text-gray-400">
-              <span className="font-semibold text-[#e6ff01]">📍</span>
-              <span>{t("aboutLocation")}</span>
+        <div className="grid md:grid-cols-2 gap-12">
+          {/* Mission & Vision Cards */}
+          <div className="space-y-4 animate-slide-in-left">
+            <div className="p-5 bg-gray-50 dark:bg-gray-900 rounded-lg border-l-4 border-[#e6ff01]">
+              <h3 className="font-bold text-[#1a1a1a] dark:text-white mb-2">{t("missionTitle")}</h3>
+              <p className="text-sm text-gray-700 dark:text-gray-300">{t("mission")}</p>
             </div>
 
-            {/* Mission & Vision Cards */}
-            <div className="space-y-4 pt-6">
-              <div className="p-5 bg-gray-50 dark:bg-gray-900 rounded-lg border-l-4 border-[#e6ff01]">
-                <h3 className="font-bold text-[#1a1a1a] dark:text-white mb-2">{t("missionTitle")}</h3>
-                <p className="text-sm text-gray-700 dark:text-gray-300">{t("mission")}</p>
-              </div>
-
-              <div className="p-5 bg-gray-50 dark:bg-gray-900 rounded-lg border-l-4 border-[#e6ff01]">
-                <h3 className="font-bold text-[#1a1a1a] dark:text-white mb-2">{t("visionTitle")}</h3>
-                <p className="text-sm text-gray-700 dark:text-gray-300">{t("vision")}</p>
-              </div>
+            <div className="p-5 bg-gray-50 dark:bg-gray-900 rounded-lg border-l-4 border-[#e6ff01]">
+              <h3 className="font-bold text-[#1a1a1a] dark:text-white mb-2">{t("visionTitle")}</h3>
+              <p className="text-sm text-gray-700 dark:text-gray-300">{t("vision")}</p>
             </div>
           </div>
 
-          {/* Right Content - Why Choose Us */}
-          <div className={`animate-slide-in-right ${isRTL ? "md:order-1" : ""}`}>
+          {/* Why Choose Us */}
+          <div className="animate-slide-in-right">
             <div className="bg-gradient-to-br from-[#1a1a1a] to-[#2d2d2d] p-8 rounded-lg text-white">
               <h3 className="text-2xl font-bold mb-6 text-[#e6ff01]">{t("whyChooseUs")}</h3>
               <ul className="space-y-4">

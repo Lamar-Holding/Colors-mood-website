@@ -15,7 +15,7 @@ export default function VehicleSection() {
         en: "Professional bus wrap design with school branding and logos",
         ar: "تصميم تغليف حافلات احترافي بهوية المدارس والشعارات",
       },
-      image: "/professional-school-bus-wrap-yellow-with-branding.jpg",
+      image: "/Artboard 11.png",
     },
     {
       titleKey: "vehicleTransport",
@@ -23,7 +23,7 @@ export default function VehicleSection() {
         en: "Commercial fleet branding for transport and logistics companies",
         ar: "تغليف أساطيل النقل بهوية شركات النقل والخدمات اللوجستية",
       },
-      image: "/commercial-fleet-vehicle-wrap-transport-company-br.jpg",
+      image: "/Artboard 8.png",
     },
     {
       titleKey: "vehicleFleets",
@@ -31,7 +31,7 @@ export default function VehicleSection() {
         en: "Corporate vehicle wrapping with custom branding",
         ar: "تغليف مركبات الشركات بهوية مخصصة",
       },
-      image: "/corporate-vehicle-wrap-professional-branding-fleet.jpg",
+      image: "/Artboard 10.png",
     },
   ]
 

@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   title: "Colors Mood | Creative Printing & Vehicle Wrapping Solutions",
   description:
     "Professional printing solutions and vehicle wrapping services in Saudi Arabia. High-quality stickers, banners, signage, and more from Colors Mood.",
-  metadataBase: new URL("https://colorsmood.com"),
+  metadataBase: new URL("https://colorsmood.com.sa"),
   keywords: ["printing", "vehicle wraps", "stickers", "signage", "Saudi Arabia", "AlUla"],
   openGraph: {
     title: "Colors Mood | Creative Printing & Vehicle Wrapping",

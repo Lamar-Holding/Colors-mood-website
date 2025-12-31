@@ -1,6 +1,7 @@
 "use client"
 
-import { useState } from "react"
+import { useState, type ComponentType, type SVGProps } from "react"
+import { Building2, PartyPopper, Gift, Sparkles, HeartPulse, Rocket } from "lucide-react"
 import { useLanguage } from "@/hooks/use-language"
 import { useTranslation } from "@/lib/i18n"
 
@@ -8,7 +9,7 @@ interface Service {
   id: string
   titleKey: string
   descKey: string
-  icon: string
+  icon: ComponentType<SVGProps<SVGSVGElement>>
 }
 
 export default function ServicesSection() {
@@ -22,37 +23,37 @@ export default function ServicesSection() {
       id: "business",
       titleKey: "servicesBusiness",
       descKey: "servicesBusinessDesc",
-      icon: "🏢",
+      icon: Building2,
     },
     {
       id: "events",
       titleKey: "servicesEvents",
       descKey: "servicesEventsDesc",
-      icon: "🎉",
+      icon: PartyPopper,
     },
     {
       id: "products",
       titleKey: "servicesProducts",
       descKey: "servicesProductsDesc",
-      icon: "🎁",
+      icon: Gift,
     },
     {
       id: "creative",
       titleKey: "servicesCreative",
       descKey: "servicesCreativeDesc",
-      icon: "✨",
+      icon: Sparkles,
     },
     {
       id: "healthcare",
       titleKey: "servicesHealthcare",
       descKey: "servicesHealthcareDesc",
-      icon: "🏥",
+      icon: HeartPulse,
     },
     {
       id: "expansion",
       titleKey: "servicesExpansion",
       descKey: "servicesExpansionDesc",
-      icon: "🚀",
+      icon: Rocket,
     },
   ]
 
@@ -78,7 +79,7 @@ export default function ServicesSection() {
                 className="w-full p-6 bg-white dark:bg-[#1a1a1a] rounded-lg border border-gray-200 dark:border-gray-800 hover:border-[#e6ff01] transition-all duration-300 text-left cursor-pointer group"
               >
                 <div className="flex items-start gap-4">
-                  <span className="text-3xl">{service.icon}</span>
+                  <service.icon className="h-8 w-8 text-[#e6ff01]" aria-hidden="true" />
                   <div className="flex-1">
                     <h3 className="font-bold text-[#1a1a1a] dark:text-white group-hover:text-[#e6ff01] transition-colors">
                       {t(service.titleKey)}

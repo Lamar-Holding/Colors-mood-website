@@ -1,5 +1,7 @@
 "use client"
 
+import type { ComponentType, SVGProps } from "react"
+import { BadgeCheck, Eye, Layers, Map, Search, Settings, Tag, Target, Users } from "lucide-react"
 import { useLanguage } from "@/hooks/use-language"
 import { useTranslation } from "@/lib/i18n"
 
@@ -8,19 +10,19 @@ export default function CapabilitiesSection() {
   const { t } = useTranslation(language)
   const isRTL = language === "ar"
 
-  const capabilities = [
-    { icon: "⚙️", key: "capabilityAdvanced" },
-    { icon: "👥", key: "capabilityTeam" },
-    { icon: "🗺️", key: "capabilityNational" },
-    { icon: "📋", key: "capabilityFlexible" },
-    { icon: "✨", key: "capabilityMultiple" },
+  const capabilities: { icon: ComponentType<SVGProps<SVGSVGElement>>; key: string }[] = [
+    { icon: Settings, key: "capabilityAdvanced" },
+    { icon: Users, key: "capabilityTeam" },
+    { icon: Map, key: "capabilityNational" },
+    { icon: Tag, key: "capabilityFlexible" },
+    { icon: Layers, key: "capabilityMultiple" },
   ]
 
-  const qualityPoints = [
-    { icon: "🏆", key: "qualityMaterial" },
-    { icon: "🎨", key: "qualityPrint" },
-    { icon: "✅", key: "qualityWarranty" },
-    { icon: "🔍", key: "qualityInspection" },
+  const qualityPoints: { icon: ComponentType<SVGProps<SVGSVGElement>>; key: string }[] = [
+    { icon: Target, key: "qualityMaterial" },
+    { icon: Eye, key: "qualityPrint" },
+    { icon: BadgeCheck, key: "qualityWarranty" },
+    { icon: Search, key: "qualityInspection" },
   ]
 
   return (
@@ -46,7 +48,7 @@ export default function CapabilitiesSection() {
               className="text-center p-6 bg-gray-50 dark:bg-gray-900 rounded-lg hover:shadow-lg hover:border-[#e6ff01] border border-transparent transition-all duration-300 animate-fade-in-up"
               style={{ animationDelay: `${idx * 0.1}s` }}
             >
-              <span className="text-4xl block mb-3">{cap.icon}</span>
+              <cap.icon className="h-10 w-10 text-[#e6ff01] mx-auto mb-3" aria-hidden="true" />
               <p className="font-semibold text-gray-700 dark:text-gray-300">{t(cap.key)}</p>
             </div>
           ))}
@@ -58,7 +60,7 @@ export default function CapabilitiesSection() {
           <div className="grid md:grid-cols-4 gap-6">
             {qualityPoints.map((point, idx) => (
               <div key={idx} className="flex gap-3">
-                <span className="text-2xl flex-shrink-0">{point.icon}</span>
+                <point.icon className="h-5 w-5 text-[#e6ff01] flex-shrink-0 mt-1" aria-hidden="true" />
                 <p className="text-gray-200">{t(point.key)}</p>
               </div>
             ))}

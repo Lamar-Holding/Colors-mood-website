@@ -39,7 +39,7 @@ export default function PortfolioSection() {
         en: "High-quality vehicle wrap design and installation for government events",
         ar: "تصميم وتطبيق تغليف مركبات عالي الجودة للفعاليات الحكومية",
       },
-      image: "/royal-commission-vehicle-wrap.jpg",
+      image: "/Artboard 2.png",
       page: "18-19",
       tags: {
         en: ["Vehicle Wrap", "Government", "Events"],
@@ -56,7 +56,7 @@ export default function PortfolioSection() {
         en: "Professional bus branding with cultural heritage messaging",
         ar: "تغليف حافلة برسائل تراثية وثقافية احترافية",
       },
-      image: "/cultural-bus-wrap-design.jpg",
+      image: "/Artboard 4.png",
       page: "20",
       tags: {
         en: ["Bus Wrap", "Cultural", "Professional"],
@@ -73,7 +73,7 @@ export default function PortfolioSection() {
         en: "Full vehicle wrap implementation for transport fleet",
         ar: "تنفيذ تغليف كامل لأسطول نقل",
       },
-      image: "/transport-fleet-vehicle-wrap.jpg",
+      image: "/Artboard 5.png",
       page: "21",
       tags: {
         en: ["Fleet Branding", "Transport"],
@@ -90,7 +90,7 @@ export default function PortfolioSection() {
         en: "Custom die-cut stickers for corporate vehicle fleet",
         ar: "استيكرات مقصوصة مخصصة لأسطول سيارات الشركات",
       },
-      image: "/corporate-sticker-application.jpg",
+      image: "/Artboard 3.png",
       page: "22",
       tags: {
         en: ["Die-cut Stickers", "Corporate"],
@@ -107,7 +107,7 @@ export default function PortfolioSection() {
         en: "Professional sticker design and application for recreational vehicles",
         ar: "تصميم وتطبيق استيكرات احترافية للمركبات الترفيهية",
       },
-      image: "/golf-cart-custom-wrap.jpg",
+      image: "/Artboard 6.png",
       page: "23",
       tags: {
         en: ["Golf Cart", "Recreational"],
@@ -124,7 +124,7 @@ export default function PortfolioSection() {
         en: "Custom interior signage and logo printing for restaurant",
         ar: "لافتات داخلية وطباعة شعارات مخصصة للمطاعم",
       },
-      image: "/restaurant-interior-signage.jpg",
+      image: "/Artboard 7.png",
       page: "24",
       tags: {
         en: ["Interior", "Signage", "Restaurant"],
@@ -214,7 +214,7 @@ export default function PortfolioSection() {
             <img
               src={selectedProject.image || "/placeholder.svg"}
               alt={selectedProject.title[language]}
-              className="w-full h-80 object-cover rounded-t-lg"
+              className="w-full max-h-[60vh] object-contain rounded-t-lg bg-black/5"
             />
 
             <div className="p-6">
