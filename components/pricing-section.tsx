@@ -54,10 +54,18 @@ export default function PricingSection() {
           <table className="w-full">
             <thead>
               <tr className="bg-[#1a1a1a] dark:bg-black">
-                <th className="px-6 py-4 text-left text-white font-bold">{t("pricingService")}</th>
-                <th className="px-6 py-4 text-left text-white font-bold">{t("pricingMaterial")}</th>
-                <th className="px-6 py-4 text-left text-white font-bold">{t("pricingWarranty")}</th>
-                <th className="px-6 py-4 text-left text-[#e6ff01] font-bold">{t("pricingPrice")}</th>
+                <th className={`px-6 py-4 ${isRTL ? "text-right" : "text-left"} text-white font-bold`}>
+                  {t("pricingService")}
+                </th>
+                <th className={`px-6 py-4 ${isRTL ? "text-right" : "text-left"} text-white font-bold`}>
+                  {t("pricingMaterial")}
+                </th>
+                <th className={`px-6 py-4 ${isRTL ? "text-right" : "text-left"} text-white font-bold`}>
+                  {t("pricingWarranty")}
+                </th>
+                <th className={`px-6 py-4 ${isRTL ? "text-right" : "text-left"} text-[#e6ff01] font-bold`}>
+                  {t("pricingPrice")}
+                </th>
               </tr>
             </thead>
             <tbody>
@@ -66,10 +74,16 @@ export default function PricingSection() {
                   key={idx}
                   className="border-b border-gray-200 dark:border-gray-800 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
                 >
-                  <td className="px-6 py-4 text-gray-700 dark:text-gray-300">{row.service}</td>
-                  <td className="px-6 py-4 text-gray-700 dark:text-gray-300">{row.material}</td>
-                  <td className="px-6 py-4 text-gray-700 dark:text-gray-300">{row.warranty}</td>
-                  <td className="px-6 py-4 font-bold">
+                  <td className={`px-6 py-4 ${isRTL ? "text-right" : "text-left"} text-gray-700 dark:text-gray-300`}>
+                    {row.service}
+                  </td>
+                  <td className={`px-6 py-4 ${isRTL ? "text-right" : "text-left"} text-gray-700 dark:text-gray-300`}>
+                    {row.material}
+                  </td>
+                  <td className={`px-6 py-4 ${isRTL ? "text-right" : "text-left"} text-gray-700 dark:text-gray-300`}>
+                    {row.warranty}
+                  </td>
+                  <td className={`px-6 py-4 font-bold ${isRTL ? "text-right" : "text-left"}`}>
                     <span className="inline-flex items-center rounded-md bg-[#e6ff01] px-2 py-1 text-[#0f0f0f]">
                       {row.price} / sqm
                     </span>

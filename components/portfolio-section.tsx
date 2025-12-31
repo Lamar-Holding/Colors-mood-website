@@ -84,7 +84,7 @@ export default function PortfolioSection() {
       id: 4,
       title: {
         en: "Lamar Company",
-        ar: "شركة لامار",
+        ar: "شركة لمار",
       },
       description: {
         en: "Custom die-cut stickers for corporate vehicle fleet",

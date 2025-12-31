@@ -61,8 +61,8 @@ export default function CapabilitiesSection() {
           <h3 className="text-3xl font-bold mb-8 text-[#e6ff01]">{t("qualityTitle")}</h3>
           <div className="grid md:grid-cols-4 gap-6">
             {qualityPoints.map((point, idx) => (
-              <div key={idx} className="flex gap-3">
-                <span className="mt-1 flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-[#e6ff01]/25 text-[#444638] dark:bg-[#e6ff01]/15 dark:text-[#e6ff01]">
+              <div key={idx} className={`flex items-center gap-3 ${isRTL ? "text-right" : "text-left"}`}>
+                <span className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-[#e6ff01]/20 text-[#e6ff01]">
                   <point.icon className="h-4 w-4" aria-hidden="true" />
                 </span>
                 <p className="text-gray-200">{t(point.key)}</p>

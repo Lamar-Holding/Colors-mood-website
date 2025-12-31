@@ -1,5 +1,6 @@
 "use client"
 
+import { useEffect, useState } from "react"
 import { useLanguage } from "@/hooks/use-language"
 import { useTranslation } from "@/lib/i18n"
 
@@ -7,12 +8,27 @@ export default function HeroSection() {
   const { language } = useLanguage()
   const { t } = useTranslation(language)
   const isRTL = language === "ar"
+  const [showScrollTop, setShowScrollTop] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 400)
+    }
+
+    handleScroll()
+    window.addEventListener("scroll", handleScroll, { passive: true })
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
     if (element) {
       element.scrollIntoView({ behavior: "smooth" })
     }
+  }
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" })
   }
 
   return (
@@ -59,19 +75,33 @@ export default function HeroSection() {
           </div>
 
           {/* Scroll Indicator */}
-          <div className="animate-bounce pt-8">
-            <svg
-              className="w-6 h-6 text-[#e6ff01] mx-auto"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              aria-hidden="true"
+          <div className="pt-8">
+            <button
+              type="button"
+              onClick={() => scrollToSection("contact")}
+              className="animate-bounce text-[#e6ff01]"
+              aria-label="Scroll to contact section"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-            </svg>
+              <svg className="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+              </svg>
+            </button>
           </div>
         </div>
       </div>
+
+      {showScrollTop && (
+        <button
+          type="button"
+          onClick={scrollToTop}
+          className={`fixed bottom-6 ${isRTL ? "right-6" : "left-6"} z-40 flex h-11 w-11 items-center justify-center rounded-full bg-[#e6ff01] text-[#0f0f0f] shadow-lg transition-transform hover:scale-105`}
+          aria-label="Scroll to top"
+        >
+          <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+          </svg>
+        </button>
+      )}
     </section>
   )
 }
