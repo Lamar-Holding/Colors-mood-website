@@ -48,7 +48,9 @@ export default function CapabilitiesSection() {
               className="text-center p-6 bg-gray-50 dark:bg-gray-900 rounded-lg hover:shadow-lg hover:border-[#e6ff01] border border-transparent transition-all duration-300 animate-fade-in-up"
               style={{ animationDelay: `${idx * 0.1}s` }}
             >
-              <cap.icon className="h-10 w-10 text-[#e6ff01] mx-auto mb-3" aria-hidden="true" />
+              <span className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-[#e6ff01]/25 text-[#444638] dark:bg-[#e6ff01]/15 dark:text-[#e6ff01]">
+                <cap.icon className="h-7 w-7" aria-hidden="true" />
+              </span>
               <p className="font-semibold text-gray-700 dark:text-gray-300">{t(cap.key)}</p>
             </div>
           ))}
@@ -60,7 +62,9 @@ export default function CapabilitiesSection() {
           <div className="grid md:grid-cols-4 gap-6">
             {qualityPoints.map((point, idx) => (
               <div key={idx} className="flex gap-3">
-                <point.icon className="h-5 w-5 text-[#e6ff01] flex-shrink-0 mt-1" aria-hidden="true" />
+                <span className="mt-1 flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-[#e6ff01]/25 text-[#444638] dark:bg-[#e6ff01]/15 dark:text-[#e6ff01]">
+                  <point.icon className="h-4 w-4" aria-hidden="true" />
+                </span>
                 <p className="text-gray-200">{t(point.key)}</p>
               </div>
             ))}

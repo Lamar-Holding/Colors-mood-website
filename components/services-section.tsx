@@ -79,7 +79,9 @@ export default function ServicesSection() {
                 className="w-full p-6 bg-white dark:bg-[#1a1a1a] rounded-lg border border-gray-200 dark:border-gray-800 hover:border-[#e6ff01] transition-all duration-300 text-left cursor-pointer group"
               >
                 <div className="flex items-start gap-4">
-                  <service.icon className="h-8 w-8 text-[#e6ff01]" aria-hidden="true" />
+                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#e6ff01]/25 text-[#444638] dark:bg-[#e6ff01]/15 dark:text-[#e6ff01]">
+                    <service.icon className="h-6 w-6" aria-hidden="true" />
+                  </span>
                   <div className="flex-1">
                     <h3 className="font-bold text-[#1a1a1a] dark:text-white group-hover:text-[#e6ff01] transition-colors">
                       {t(service.titleKey)}
