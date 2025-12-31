@@ -26,10 +26,6 @@ export default function AboutSection() {
           <p className="mx-auto max-w-3xl text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
             {t("aboutCompany")}
           </p>
-          <div className="mt-4 flex items-center justify-center gap-2 text-sm text-gray-600 dark:text-gray-400">
-            <span className="font-semibold text-[#e6ff01]">📍</span>
-            <span>{t("aboutLocation")}</span>
-          </div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12">
