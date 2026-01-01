@@ -131,6 +131,57 @@ export default function PortfolioSection() {
         ar: ["داخلي", "لافتات", "مطعم"],
       },
     },
+    {
+      id: 7,
+      title: {
+        en: "Dar Tantora – The House Hotel",
+        ar: "فندق دار طنطورة",
+      },
+      description: {
+        en: "Design and application of die-cut stickers on golf carts, Bronco vehicles, and SUVs with high quality and in line with the client's visual identity.",
+        ar: "تصميم وتطبيق استيكرات مقصوصة (داي كت) على عربات الجولف ومركبات برونكو وبجودة عالية وبما يتماشى مع الهوية البصرية للعميل.",
+      },
+      image: "/Dar Tantora – The House Hotel.png",
+      page: "27",
+      tags: {
+        en: ["Die-cut Stickers", "Golf Carts", "Bronco", "SUV"],
+        ar: ["استيكرات مقصوصة", "عربات جولف", "برونكو", "دفع رباعي"],
+      },
+    },
+    {
+      id: 8,
+      title: {
+        en: "Ethraa Al Uloom.co",
+        ar: "شركة اثراء العلوم للتجارة",
+      },
+      description: {
+        en: "High-quality sticker application on Bronco vehicles, including design, printing, and installation, with full adherence to the client's visual identity.",
+        ar: "تطبيق استيكر عالي الجودة على مركبات برونكو، يشمل التصميم والطباعة والتركيب، مع الالتزام الكامل بالهوية البصرية للعميل.",
+      },
+      image: "/Ethraa Al Uloom.co.png",
+      page: "23",
+      tags: {
+        en: ["Bronco", "Stickers", "Installation"],
+        ar: ["برونكو", "استيكر", "تركيب"],
+      },
+    },
+    {
+      id: 9,
+      title: {
+        en: "The AIMES Al Arabia",
+        ar: "شركة ايمز العربية",
+      },
+      description: {
+        en: "Custom vehicle branding with cohesive design, printing, and installation aligned to the brand identity.",
+        ar: "تنفيذ هوية مركبات متكاملة تشمل التصميم والطباعة والتركيب بما يتماشى مع الهوية البصرية.",
+      },
+      image: "/The AIMES Al Arabia.png",
+      page: "21",
+      tags: {
+        en: ["Vehicle Branding", "Design", "Printing"],
+        ar: ["هوية مركبات", "تصميم", "طباعة"],
+      },
+    },
   ]
 
   return (
