@@ -36,9 +36,16 @@ export default function HeroSection() {
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-[#1a1a1a] to-black"
     >
-      {/* Background Video/Image Effect */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0 bg-[url('/printing-workshop.png')] bg-cover bg-center mix-blend-overlay" />
+      {/* Background Video */}
+      <div className="absolute inset-0 opacity-25">
+        <video
+          className="absolute inset-0 h-full w-full object-cover"
+          src="/colorsmoodbackground.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+        />
       </div>
 
       {/* Animated Background Elements */}
@@ -50,7 +57,7 @@ export default function HeroSection() {
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Main Heading */}
         <div className={`space-y-6 animate-fade-in-up ${isRTL ? "rtl" : "ltr"}`}>
-          <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight">
+          <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight">
             <span className="text-[#e6ff01]">{t("heroTitle")}</span>
           </h1>
 
@@ -60,14 +67,14 @@ export default function HeroSection() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8 animate-fade-in pb-20">
             <button
               onClick={() => scrollToSection("contact")}
-              className="px-8 py-3 bg-[#e6ff01] text-[#0f0f0f] font-bold rounded-lg hover:bg-[#e6ff01] transition-all duration-300 hover:shadow-lg hover:shadow-[#e6ff01]/50 transform hover:scale-105"
+              className="px-3 py-1 bg-[#e6ff01] text-[#0f0f0f] font-bold rounded-lg hover:bg-[#e6ff01] transition-all duration-300 hover:shadow-lg hover:shadow-[#e6ff01]/50 transform hover:scale-105"
               aria-label="Request a quote for our services"
             >
               {t("ctaQuote")}
             </button>
             <button
               onClick={() => scrollToSection("portfolio")}
-              className="px-8 py-3 border-2 border-[#e6ff01] text-[#e6ff01] font-bold rounded-lg hover:bg-[#e6ff01] hover:text-[#0f0f0f] transition-all duration-300"
+              className="px-3 py-1 border-2 border-[#e6ff01] text-[#e6ff01] font-bold rounded-lg hover:bg-[#e6ff01] hover:text-[#0f0f0f] transition-all duration-300"
               aria-label="View our portfolio and past projects"
             >
               {t("ctaWork")}

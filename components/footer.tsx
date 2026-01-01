@@ -15,10 +15,15 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <h3 className="text-2xl font-bold text-[#e6ff01] mb-2">Colors Mood</h3>
-            <a 
-              href={language === "ar" ? "/Colors Mood - Profile Arabic.pdf" : "/Colors Mood - Profile English.pdf"} 
-              download 
+            <img
+              src="/Dark Mood Logo.png"
+              alt="Colors Mood"
+              className="h-15 w-auto mb-2"
+              loading="lazy"
+            />
+            <a
+              href={language === "ar" ? "/Colors Mood - Profile Arabic.pdf" : "/Colors Mood - Profile English.pdf"}
+              download
               className="text-gray-400 text-sm font-semibold hover:text-[#e6ff01] transition inline-block"
             >
               {t("footerSourceNote")}
