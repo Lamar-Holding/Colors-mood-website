@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, type FormEvent } from "react"
+import { Mail, MapPin, Phone } from "lucide-react"
 import { useLanguage } from "@/hooks/use-language"
 import { useTranslation } from "@/lib/i18n"
 
@@ -75,33 +76,35 @@ export default function ContactSection() {
           <div className="animate-slide-in-left">
             <div className="space-y-8">
               <div className="flex gap-4 items-start">
-                <span className="text-3xl">📞</span>
+                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#e6ff01]/25 text-[#444638] dark:bg-[#e6ff01]/15 dark:text-[#e6ff01]">
+                  <Phone className="h-5 w-5" aria-hidden="true" />
+                </span>
                 <div>
                   <h3 className="font-bold text-[#1a1a1a] dark:text-white mb-1">{t("contactTitle")}</h3>
-                  <a
-                    href="tel:+966544927409"
-                    className="inline-flex items-center rounded-md bg-[#e6ff01] px-2 py-1 font-semibold text-[#0f0f0f] transition"
-                  >
-                    {t("contactPhone")}
+                  <a href="tel:+966544927409" className="text-gray-600 dark:text-gray-400 transition">
+                    <span dir="ltr" className="inline-block">
+                      {t("contactPhone")}
+                    </span>
                   </a>
                 </div>
               </div>
 
               <div className="flex gap-4 items-start">
-                <span className="text-3xl">✉️</span>
+                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#e6ff01]/25 text-[#444638] dark:bg-[#e6ff01]/15 dark:text-[#e6ff01]">
+                  <Mail className="h-5 w-5" aria-hidden="true" />
+                </span>
                 <div>
                   <h3 className="font-bold text-[#1a1a1a] dark:text-white mb-1">Email</h3>
-                  <a
-                    href="mailto:Sales.dept@colorsmood.com.sa"
-                    className="inline-flex items-center rounded-md bg-[#e6ff01] px-2 py-1 font-semibold text-[#0f0f0f] transition"
-                  >
+                  <a href="mailto:Sales.dept@colorsmood.com.sa" className="text-gray-600 dark:text-gray-400 transition">
                     {t("contactEmail")}
                   </a>
                 </div>
               </div>
 
               <div className="flex gap-4 items-start">
-                <span className="text-3xl">📍</span>
+                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#e6ff01]/25 text-[#444638] dark:bg-[#e6ff01]/15 dark:text-[#e6ff01]">
+                  <MapPin className="h-5 w-5" aria-hidden="true" />
+                </span>
                 <div>
                   <h3 className="font-bold text-[#1a1a1a] dark:text-white mb-1">{t("aboutTitle")}</h3>
                   <p className="text-gray-600 dark:text-gray-400">{t("contactLocation")}</p>

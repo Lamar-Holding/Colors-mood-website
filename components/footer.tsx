@@ -1,5 +1,6 @@
 "use client"
 
+import { Mail, Phone } from "lucide-react"
 import { useLanguage } from "@/hooks/use-language"
 import { useTranslation } from "@/lib/i18n"
 
@@ -72,14 +73,20 @@ export default function Footer() {
           <div>
             <h4 className="font-bold text-white mb-4">{t("contactTitle")}</h4>
             <ul className="space-y-2 text-gray-400 text-sm">
-              <li className="flex gap-2">
-                <span>📞</span>
+              <li className={`flex items-center gap-2 ${isRTL ? "flex-row-reverse justify-end text-right" : ""}`}>
+                <span className="flex h-3.5 w-3.5 items-center justify-center rounded-full bg-[#e6ff01]/25 text-[#e6ff01]">
+                  <Phone className="h-8 w-8" aria-hidden="true" />
+                </span>
                 <a href="tel:+966544927409" className="hover:text-[#e6ff01] transition">
-                  {t("contactPhone")}
+                  <span dir="ltr" className="inline-block">
+                    {t("contactPhone")}
+                  </span>
                 </a>
               </li>
-              <li className="flex gap-2">
-                <span>✉️</span>
+              <li className={`flex items-center gap-2 ${isRTL ? "flex-row-reverse justify-end text-right" : ""}`}>
+                <span className="flex h-3.5 w-3.5 items-center justify-center rounded-full bg-[#e6ff01]/25 text-[#e6ff01]">
+                  <Mail className="h-8 w-8" aria-hidden="true" />
+                </span>
                 <a href="mailto:Sales.dept@colorsmood.com.sa" className="hover:text-[#e6ff01] transition">
                   {t("contactEmail")}
                 </a>
