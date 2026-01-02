@@ -33,13 +33,6 @@ export default function HeroSection() {
     }
   }, [])
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId)
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
-    }
-  }
-
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" })
   }
@@ -102,9 +95,9 @@ export default function HeroSection() {
           <div className="pt-8">
             <button
               type="button"
-              onClick={() => scrollToSection("contact")}
+              onClick={() => scrollToSection("about")}
               className="animate-bounce text-[#e6ff01]"
-              aria-label="Scroll to contact section"
+              aria-label="Scroll to about section"
             >
               <svg className="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
@@ -129,3 +122,9 @@ export default function HeroSection() {
     </section>
   )
 }
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId)
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" })
+    }
+  }

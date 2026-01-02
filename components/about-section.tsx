@@ -28,6 +28,45 @@ export default function AboutSection() {
           </p>
         </div>
 
+        <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <div className="bg-gray-50 dark:bg-gray-900 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-[#1a1a1a] dark:text-white mb-3">{t("aboutWhatWeDoTitle")}</h3>
+            <p className="text-sm text-gray-700 dark:text-gray-300 mb-4">{t("aboutWhatWeDoBody")}</p>
+            <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+              <li>{t("aboutWhatWeDoItem1")}</li>
+              <li>{t("aboutWhatWeDoItem2")}</li>
+            </ul>
+          </div>
+          <div className="bg-gray-50 dark:bg-gray-900 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-[#1a1a1a] dark:text-white mb-3">{t("aboutGoalsTitle")}</h3>
+            <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+              <li>{t("aboutGoalsItem1")}</li>
+              <li>{t("aboutGoalsItem2")}</li>
+              <li>{t("aboutGoalsItem3")}</li>
+              <li>{t("aboutGoalsItem4")}</li>
+              <li>{t("aboutGoalsItem5")}</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="mb-12">
+          <h3 className="text-2xl font-bold text-[#1a1a1a] dark:text-white mb-6 text-center">{t("aboutValuesTitle")}</h3>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="p-4 bg-gray-50 dark:bg-gray-900 rounded-lg text-sm text-gray-700 dark:text-gray-300">
+              {t("aboutValuesItem1")}
+            </div>
+            <div className="p-4 bg-gray-50 dark:bg-gray-900 rounded-lg text-sm text-gray-700 dark:text-gray-300">
+              {t("aboutValuesItem2")}
+            </div>
+            <div className="p-4 bg-gray-50 dark:bg-gray-900 rounded-lg text-sm text-gray-700 dark:text-gray-300">
+              {t("aboutValuesItem3")}
+            </div>
+            <div className="p-4 bg-gray-50 dark:bg-gray-900 rounded-lg text-sm text-gray-700 dark:text-gray-300">
+              {t("aboutValuesItem4")}
+            </div>
+          </div>
+        </div>
+
         <div className="grid md:grid-cols-2 gap-12">
           {/* Mission & Vision Cards */}
           <div className="space-y-4 animate-slide-in-left">

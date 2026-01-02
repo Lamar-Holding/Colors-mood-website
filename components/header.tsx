@@ -1,6 +1,8 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import Link from "next/link"
+import { usePathname } from "next/navigation"
+import { useState } from "react"
 import { useLanguage } from "@/hooks/use-language"
 import { useTheme } from "@/hooks/use-theme"
 import { useTranslation } from "@/lib/i18n"
@@ -10,50 +12,22 @@ export default function Header() {
   const { theme, toggleTheme } = useTheme()
   const { t } = useTranslation(language)
   const [isOpen, setIsOpen] = useState(false)
-  const [activeSection, setActiveSection] = useState("home")
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = ["home", "about", "services", "vehicle", "capabilities", "pricing", "portfolio", "contact"]
-      const currentSection = sections.find((section) => {
-        const element = document.getElementById(section)
-        if (element) {
-          const rect = element.getBoundingClientRect()
-          return rect.top <= 120 && rect.bottom > 120
-        }
-        return false
-      })
-      if (currentSection) {
-        setActiveSection(currentSection)
-      }
-    }
-
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+  const pathname = usePathname()
 
   if (!mounted) return null
 
   const isRTL = language === "ar"
   const navItems = [
-    { id: "home", label: t("navHome") },
-    { id: "about", label: t("navAbout") },
-    { id: "services", label: t("navServices") },
-    { id: "vehicle", label: t("navVehicle") },
-    { id: "capabilities", label: t("navCapabilities") },
-    { id: "pricing", label: t("navPricing") },
-    { id: "portfolio", label: t("navPortfolio") },
-    { id: "contact", label: t("navContact") },
+    { href: "/", label: t("navHome") },
+    { href: "/company", label: t("navAbout") },
+    { href: "/services", label: t("navServices") },
+    { href: "/vehicle", label: t("navVehicle") },
+    { href: "/capabilities", label: t("navCapabilities") },
+    { href: "/pricing", label: t("navPricing") },
+    { href: "/portfolio", label: t("navPortfolio") },
+    { href: "/clients", label: t("navClients") },
+    { href: "/#contact", label: t("navContact") },
   ]
-
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId)
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
-      setActiveSection(sectionId)
-      setIsOpen(false)
-    }
-  }
 
   return (
     <header
@@ -76,19 +50,22 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className={`hidden md:flex gap-1 ${isRTL ? "order-1" : ""}`}>
-            {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className={`px-3 py-2 text-sm font-medium rounded transition-colors duration-200 ${
-                  activeSection === item.id
-                    ? "text-[#e6ff01] bg-gray-100 dark:bg-gray-900"
-                    : "text-gray-700 dark:text-gray-300 hover:text-[#e6ff01]"
-                }`}
-              >
-                {item.label}
-              </button>
-            ))}
+            {navItems.map((item) => {
+              const isActive = pathname === item.href
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`px-3 py-2 text-sm font-medium rounded transition-colors duration-200 ${
+                    isActive
+                      ? "text-[#e6ff01] bg-gray-100 dark:bg-gray-900"
+                      : "text-gray-700 dark:text-gray-300 hover:text-[#e6ff01]"
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              )
+            })}
           </nav>
 
           {/* Right Side Controls */}
@@ -158,19 +135,23 @@ export default function Header() {
         {isOpen && (
           <nav className="md:hidden border-t border-gray-200 dark:border-gray-800 py-4">
             <div className="flex flex-col gap-2">
-              {navItems.map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => scrollToSection(item.id)}
-                  className={`px-4 py-2 text-left rounded transition-colors ${
-                    activeSection === item.id
-                      ? "text-[#e6ff01] bg-gray-100 dark:bg-gray-900"
-                      : "text-gray-700 dark:text-gray-300 hover:text-[#e6ff01]"
-                  }`}
-                >
-                  {item.label}
-                </button>
-              ))}
+              {navItems.map((item) => {
+                const isActive = pathname === item.href
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onClick={() => setIsOpen(false)}
+                    className={`px-4 py-2 text-left rounded transition-colors ${
+                      isActive
+                        ? "text-[#e6ff01] bg-gray-100 dark:bg-gray-900"
+                        : "text-gray-700 dark:text-gray-300 hover:text-[#e6ff01]"
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                )
+              })}
             </div>
           </nav>
         )}

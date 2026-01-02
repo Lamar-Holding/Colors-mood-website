@@ -35,17 +35,17 @@ export default function Footer() {
             <h4 className="font-bold text-white mb-4">{t("navServices")}</h4>
             <ul className="space-y-2 text-gray-400 text-sm">
               <li>
-                <a href="#services" className="hover:text-[#e6ff01] transition">
+                <a href="/services" className="hover:text-[#e6ff01] transition">
                   {t("serviceVehicleWraps")}
                 </a>
               </li>
               <li>
-                <a href="#services" className="hover:text-[#e6ff01] transition">
+                <a href="/services" className="hover:text-[#e6ff01] transition">
                   {t("serviceBanners")}
                 </a>
               </li>
               <li>
-                <a href="#services" className="hover:text-[#e6ff01] transition">
+                <a href="/services" className="hover:text-[#e6ff01] transition">
                   {t("serviceSignage")}
                 </a>
               </li>
@@ -57,17 +57,22 @@ export default function Footer() {
             <h4 className="font-bold text-white mb-4">{t("aboutTitle")}</h4>
             <ul className="space-y-2 text-gray-400 text-sm">
               <li>
-                <a href="#about" className="hover:text-[#e6ff01] transition">
+                <a href="/company" className="hover:text-[#e6ff01] transition">
                   {t("aboutTitle")}
                 </a>
               </li>
               <li>
-                <a href="#portfolio" className="hover:text-[#e6ff01] transition">
+                <a href="/portfolio" className="hover:text-[#e6ff01] transition">
                   {t("portfolioTitle")}
                 </a>
               </li>
               <li>
-                <a href="#contact" className="hover:text-[#e6ff01] transition">
+                <a href="/clients" className="hover:text-[#e6ff01] transition">
+                  {t("navClients")}
+                </a>
+              </li>
+              <li>
+                <a href="/#contact" className="hover:text-[#e6ff01] transition">
                   {t("contactTitle")}
                 </a>
               </li>
