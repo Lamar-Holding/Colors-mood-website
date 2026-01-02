@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { useLanguage } from "@/hooks/use-language"
 import { useTranslation } from "@/lib/i18n"
 
@@ -9,6 +9,7 @@ export default function HeroSection() {
   const { t } = useTranslation(language)
   const isRTL = language === "ar"
   const [showScrollTop, setShowScrollTop] = useState(false)
+  const videoRef = useRef<HTMLVideoElement | null>(null)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,6 +19,18 @@ export default function HeroSection() {
     handleScroll()
     window.addEventListener("scroll", handleScroll, { passive: true })
     return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
+  useEffect(() => {
+    const video = videoRef.current
+    if (!video) return
+    video.muted = true
+    const playPromise = video.play()
+    if (playPromise && typeof playPromise.catch === "function") {
+      playPromise.catch(() => {
+        // Autoplay can be blocked on some mobile devices; poster will show instead.
+      })
+    }
   }, [])
 
   const scrollToSection = (sectionId: string) => {
@@ -37,14 +50,18 @@ export default function HeroSection() {
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-[#1a1a1a] to-black"
     >
       {/* Background Video */}
-      <div className="absolute inset-0 opacity-25">
+      <div className="absolute inset-0 opacity-35 md:opacity-25">
         <video
+          ref={videoRef}
           className="absolute inset-0 h-full w-full object-cover"
           src="/colorsmoodbackground.mp4"
           autoPlay
           loop
           muted
           playsInline
+          preload="auto"
+          poster="/printing-workshop.png"
+          aria-hidden="true"
         />
       </div>
 
