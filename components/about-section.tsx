@@ -32,12 +32,12 @@ export default function AboutSection() {
           {/* Mission & Vision Cards */}
           <div className="space-y-4 animate-slide-in-left">
             <div className="p-5 bg-gray-50 dark:bg-gray-900 rounded-lg border-l-4 border-[#e6ff01]">
-              <h3 className="font-bold text-[#1a1a1a] dark:text-white mb-2">{t("missionTitle")}</h3>
+              <h3 className="font-bold text-[#1a1a1a] dark:text-white mb-4.5">{t("missionTitle")}</h3>
               <p className="text-sm text-gray-700 dark:text-gray-300">{t("mission")}</p>
             </div>
 
             <div className="p-5 bg-gray-50 dark:bg-gray-900 rounded-lg border-l-4 border-[#e6ff01]">
-              <h3 className="font-bold text-[#1a1a1a] dark:text-white mb-2">{t("visionTitle")}</h3>
+              <h3 className="font-bold text-[#1a1a1a] dark:text-white mb-4.5">{t("visionTitle")}</h3>
               <p className="text-sm text-gray-700 dark:text-gray-300">{t("vision")}</p>
             </div>
           </div>
