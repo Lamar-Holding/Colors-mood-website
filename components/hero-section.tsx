@@ -62,19 +62,19 @@ export default function HeroSection() {
           </h1>
 
           <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">{t("heroSubtitle")}</p>
-
+          <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">{t("heroSubtitle2")}</p>
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8 animate-fade-in pb-20">
             <button
               onClick={() => scrollToSection("contact")}
-              className="px-3 py-1 bg-[#e6ff01] text-[#0f0f0f] font-bold rounded-lg hover:bg-[#e6ff01] transition-all duration-300 hover:shadow-lg hover:shadow-[#e6ff01]/50 transform hover:scale-105"
+              className="px-5 py-2 bg-[#e6ff01] text-[#0f0f0f] font-bold rounded-lg hover:bg-[#e6ff01] transition-all duration-300 hover:shadow-lg hover:shadow-[#e6ff01]/50 transform hover:scale-105"
               aria-label="Request a quote for our services"
             >
               {t("ctaQuote")}
             </button>
             <button
               onClick={() => scrollToSection("portfolio")}
-              className="px-3 py-1 border-2 border-[#e6ff01] text-[#e6ff01] font-bold rounded-lg hover:bg-[#e6ff01] hover:text-[#0f0f0f] transition-all duration-300"
+              className="px-5 py-2 border-2 border-[#e6ff01] text-[#e6ff01] font-bold rounded-lg hover:bg-[#e6ff01] hover:text-[#0f0f0f] transition-all duration-300"
               aria-label="View our portfolio and past projects"
             >
               {t("ctaWork")}

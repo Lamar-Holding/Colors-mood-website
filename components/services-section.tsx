@@ -66,8 +66,11 @@ export default function ServicesSection() {
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl md:text-5xl font-bold text-[#1a1a1a] dark:text-white mb-4">{t("servicesTitle")}</h2>
+          <div className="relative w-45 mx-auto mb-6">
+          <div className="h-1 rounded-full bg-gradient-to-r from-[#e6ff01] via-[#f4ff4d] to-transparent blur-sm opacity-80"></div>
+          <div className="absolute inset-0 h-1 rounded-full bg-gradient-to-r from-[#e6ff01] via-[#f4ff4d] to-transparent"></div>
+          </div>
           <p className="text-gray-600 dark:text-gray-400">{t("servicesSubtitle")}</p>
-          <div className="w-16 h-1 bg-[#e6ff01] mx-auto rounded-full mt-4" />
         </div>
 
         {/* Services Grid */}
@@ -76,7 +79,7 @@ export default function ServicesSection() {
             <div key={service.id} className="animate-fade-in-up" style={{ animationDelay: `${idx * 0.1}s` }}>
               <button
                 onClick={() => setExpanded(expanded === service.id ? null : service.id)}
-                className="w-full p-6 bg-white dark:bg-[#1a1a1a] rounded-lg border border-gray-200 dark:border-gray-800 hover:border-[#e6ff01] transition-all duration-300 text-left cursor-pointer group"
+                className={`w-full p-6 bg-white dark:bg-[#1a1a1a] rounded-lg border border-gray-200 dark:border-gray-800 hover:border-[#e6ff01] transition-all duration-300 ${isRTL ? "text-right" : "text-left"} cursor-pointer group`}
               >
                 <div className="flex items-start gap-4">
                   <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#e6ff01]/25 text-[#444638] dark:bg-[#e6ff01]/15 dark:text-[#e6ff01]">

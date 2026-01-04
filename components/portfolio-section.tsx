@@ -138,10 +138,10 @@ export default function PortfolioSection() {
         ar: "فندق دار طنطورة",
       },
       description: {
-        en: "Design and application of die-cut stickers on golf carts, Bronco vehicles, and SUVs with high quality and in line with the client's visual identity.",
-        ar: "تصميم وتطبيق استيكرات مقصوصة (داي كت) على عربات الجولف ومركبات برونكو وبجودة عالية وبما يتماشى مع الهوية البصرية للعميل.",
+        en: "Design and application of die-cut stickers on SUVs with high quality.",
+        ar: "تصميم وتطبيق استيكرات مقصوصة على مركبات دفع رباعي بجودة عالية.",
       },
-      image: "/Dar Tantora – The House Hotel.png",
+      image: "/Artboard 12.png",
       page: "27",
       tags: {
         en: ["Die-cut Stickers", "Golf Carts", "Bronco", "SUV"],
@@ -155,10 +155,10 @@ export default function PortfolioSection() {
         ar: "شركة اثراء العلوم للتجارة",
       },
       description: {
-        en: "High-quality sticker application on Bronco vehicles, including design, printing, and installation, with full adherence to the client's visual identity.",
-        ar: "تطبيق استيكر عالي الجودة على مركبات برونكو، يشمل التصميم والطباعة والتركيب، مع الالتزام الكامل بالهوية البصرية للعميل.",
+        en: "High-quality sticker application on Bronco vehicles, including design, printing and installation.",
+        ar: "تطبيق استيكرات عالية الجودة على مركبات برونكو، بما في ذلك التصميم والطباعة والتركيب.",
       },
-      image: "/Ethraa Al Uloom.co.png",
+      image: "/Artboard 14.png",
       page: "23",
       tags: {
         en: ["Bronco", "Stickers", "Installation"],
@@ -175,7 +175,7 @@ export default function PortfolioSection() {
         en: "Custom vehicle branding with cohesive design, printing, and installation aligned to the brand identity.",
         ar: "تنفيذ هوية مركبات متكاملة تشمل التصميم والطباعة والتركيب بما يتماشى مع الهوية البصرية.",
       },
-      image: "/The AIMES Al Arabia.png",
+      image: "/Artboard 13.png",
       page: "21",
       tags: {
         en: ["Vehicle Branding", "Design", "Printing"],
@@ -193,10 +193,12 @@ export default function PortfolioSection() {
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl md:text-5xl font-bold text-[#1a1a1a] dark:text-white mb-4">{t("portfolioTitle")}</h2>
-          <p className="text-gray-600 dark:text-gray-400">{t("portfolioSubtitle")}</p>
-          <div className="w-16 h-1 bg-[#e6ff01] mx-auto rounded-full mt-4" />
+          <div className="relative w-50 sm:w-60 md:w-50 lg:w-70 mx-auto mb-6">
+          <div className="h-1 rounded-full bg-gradient-to-r from-[#e6ff01] via-[#f4ff4d] to-transparent blur-sm opacity-80"></div>
+          <div className="absolute inset-0 h-1 rounded-full bg-gradient-to-r from-[#e6ff01] via-[#f4ff4d] to-transparent"></div>
+          </div>
+          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">{t("portfolioSubtitle")}</p>
         </div>
-
         {/* Portfolio Grid */}
         <div className="grid md:grid-cols-3 gap-6 animate-fade-in-up">
           {projects.map((project, idx) => (

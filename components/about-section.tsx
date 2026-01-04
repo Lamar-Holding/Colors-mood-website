@@ -19,7 +19,10 @@ export default function AboutSection() {
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl md:text-5xl font-bold text-[#1a1a1a] dark:text-white mb-4">{t("aboutTitle")}</h2>
-          <div className="w-16 h-1 bg-[#e6ff01] mx-auto rounded-full" />
+          <div className="relative w-40  mx-auto">
+          <div className="h-1 rounded-full bg-gradient-to-r from-[#e6ff01] via-[#f4ff4d] to-transparent blur-sm opacity-80"></div>
+          <div className="absolute inset-0 h-1 rounded-full bg-gradient-to-r from-[#e6ff01] via-[#f4ff4d] to-transparent"></div>
+          </div>
         </div>
 
         <div className="mb-12 text-center animate-fade-in-up">
@@ -32,12 +35,12 @@ export default function AboutSection() {
           {/* Mission & Vision Cards */}
           <div className="space-y-4 animate-slide-in-left">
             <div className="p-5 bg-gray-50 dark:bg-gray-900 rounded-lg border-l-4 border-[#e6ff01]">
-              <h3 className="font-bold text-[#1a1a1a] dark:text-white mb-2">{t("missionTitle")}</h3>
+              <h3 className="font-bold text-[#1a1a1a] dark:text-white mb-4.5">{t("missionTitle")}</h3>
               <p className="text-sm text-gray-700 dark:text-gray-300">{t("mission")}</p>
             </div>
 
             <div className="p-5 bg-gray-50 dark:bg-gray-900 rounded-lg border-l-4 border-[#e6ff01]">
-              <h3 className="font-bold text-[#1a1a1a] dark:text-white mb-2">{t("visionTitle")}</h3>
+              <h3 className="font-bold text-[#1a1a1a] dark:text-white mb-4.5">{t("visionTitle")}</h3>
               <p className="text-sm text-gray-700 dark:text-gray-300">{t("vision")}</p>
             </div>
           </div>

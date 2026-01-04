@@ -45,7 +45,10 @@ export default function PricingSection() {
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl md:text-5xl font-bold text-[#1a1a1a] dark:text-white mb-4">{t("pricingTitle")}</h2>
-          <div className="w-16 h-1 bg-[#e6ff01] mx-auto rounded-full mb-6" />
+          <div className="relative w-30 sm:w-60 md:w-30 lg:w-40 mx-auto mb-6">
+          <div className="h-1 rounded-full bg-gradient-to-r from-[#e6ff01] via-[#f4ff4d] to-transparent blur-sm opacity-80"></div>
+          <div className="absolute inset-0 h-1 rounded-full bg-gradient-to-r from-[#e6ff01] via-[#f4ff4d] to-transparent"></div>
+          </div>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">{t("pricingNote")}</p>
         </div>
 

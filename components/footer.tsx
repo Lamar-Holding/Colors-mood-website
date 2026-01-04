@@ -18,7 +18,7 @@ export default function Footer() {
             <img
               src="/Dark Mood Logo.png"
               alt="Colors Mood"
-              className="h-15 w-auto mb-2"
+              className="h-20 w-auto mb-0.5"
               loading="lazy"
             />
             <a

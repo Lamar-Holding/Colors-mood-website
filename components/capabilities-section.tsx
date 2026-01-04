@@ -33,11 +33,12 @@ export default function CapabilitiesSection() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#1a1a1a] dark:text-white mb-4">
-            {t("capabilitiesTitle")}
-          </h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-[#1a1a1a] dark:text-white mb-4">{t("capabilitiesTitle")}</h2>
+          <div className="relative w-40 sm:w-60 md:w-60 lg:w-120 mx-auto mb-6">
+          <div className="h-1 rounded-full bg-gradient-to-r from-[#e6ff01] via-[#f4ff4d] to-transparent blur-sm opacity-80"></div>
+          <div className="absolute inset-0 h-1 rounded-full bg-gradient-to-r from-[#e6ff01] via-[#f4ff4d] to-transparent"></div>
+          </div>
           <p className="text-gray-600 dark:text-gray-400">{t("capabilitiesSubtitle")}</p>
-          <div className="w-16 h-1 bg-[#e6ff01] mx-auto rounded-full mt-4" />
         </div>
 
         {/* Capabilities Grid */}

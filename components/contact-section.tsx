@@ -67,8 +67,11 @@ export default function ContactSection() {
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl md:text-5xl font-bold text-[#1a1a1a] dark:text-white mb-4">{t("contactTitle")}</h2>
+          <div className="relative w-45 sm:w-60 md:w-45 lg:w-60 mx-auto mb-6">
+          <div className="h-1 rounded-full bg-gradient-to-r from-[#e6ff01] via-[#f4ff4d] to-transparent blur-sm opacity-80"></div>
+          <div className="absolute inset-0 h-1 rounded-full bg-gradient-to-r from-[#e6ff01] via-[#f4ff4d] to-transparent"></div>
+          </div>
           <p className="text-gray-600 dark:text-gray-400">{t("contactNote")}</p>
-          <div className="w-16 h-1 bg-[#e6ff01] mx-auto rounded-full mt-4" />
         </div>
 
         <div className="grid md:grid-cols-2 gap-12">
@@ -80,7 +83,7 @@ export default function ContactSection() {
                   <Phone className="h-5 w-5" aria-hidden="true" />
                 </span>
                 <div>
-                  <h3 className="font-bold text-[#1a1a1a] dark:text-white mb-1">{t("contactTitle")}</h3>
+                  <h3 className="font-bold text-[#1a1a1a] dark:text-white mb-1">{t("Phone")}</h3>
                   <a href="tel:+966544927409" className="text-gray-600 dark:text-gray-400 transition">
                     <span dir="ltr" className="inline-block">
                       {t("contactPhone")}
@@ -94,7 +97,7 @@ export default function ContactSection() {
                   <Mail className="h-5 w-5" aria-hidden="true" />
                 </span>
                 <div>
-                  <h3 className="font-bold text-[#1a1a1a] dark:text-white mb-1">Email</h3>
+                  <h3 className="font-bold text-[#1a1a1a] dark:text-white mb-1">{t("Email")}</h3>
                   <a href="mailto:Sales.dept@colorsmood.com.sa" className="text-gray-600 dark:text-gray-400 transition">
                     {t("contactEmail")}
                   </a>
@@ -106,7 +109,7 @@ export default function ContactSection() {
                   <MapPin className="h-5 w-5" aria-hidden="true" />
                 </span>
                 <div>
-                  <h3 className="font-bold text-[#1a1a1a] dark:text-white mb-1">{t("aboutTitle")}</h3>
+                  <h3 className="font-bold text-[#1a1a1a] dark:text-white mb-1">{t("Location")}</h3>
                   <p className="text-gray-600 dark:text-gray-400">{t("contactLocation")}</p>
                 </div>
               </div>
