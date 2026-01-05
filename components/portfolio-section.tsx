@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useMemo, useState } from "react"
 import { useLanguage } from "@/hooks/use-language"
 import { useTranslation } from "@/lib/i18n"
 
@@ -15,6 +15,7 @@ interface PortfolioItem {
     ar: string
   }
   image: string
+  images?: string[]
   page: string
   tags: {
     en: string[]
@@ -27,6 +28,8 @@ export default function PortfolioSection() {
   const { t } = useTranslation(language)
   const isRTL = language === "ar"
   const [selectedProject, setSelectedProject] = useState<PortfolioItem | null>(null)
+  const [activeImageIndex, setActiveImageIndex] = useState(0)
+  const [gridImageIndexById, setGridImageIndexById] = useState<Record<number, number>>({})
 
   const projects: PortfolioItem[] = [
     {
@@ -40,6 +43,7 @@ export default function PortfolioSection() {
         ar: "تصميم وتطبيق تغليف مركبات عالي الجودة للفعاليات الحكومية",
       },
       image: "/Artboard 2.png",
+      images: ["/Artboard 2.png", "/Artboard 2 - 2.png", "/Artboard 2 - 3.png", "/Artboard 2 - 4.png"],
       page: "18-19",
       tags: {
         en: ["Vehicle Wrap", "Government", "Events"],
@@ -57,6 +61,7 @@ export default function PortfolioSection() {
         ar: "تغليف حافلة برسائل تراثية وثقافية احترافية",
       },
       image: "/Artboard 4.png",
+      images: ["/Artboard 4.png", "/Artboard 4 - 2.png"],
       page: "20",
       tags: {
         en: ["Bus Wrap", "Cultural", "Professional"],
@@ -90,7 +95,8 @@ export default function PortfolioSection() {
         en: "Custom die-cut stickers for corporate vehicle fleet",
         ar: "استيكرات مقصوصة مخصصة لأسطول سيارات الشركات",
       },
-      image: "/Artboard 3.png",
+      image: "/Artboard 3 - 2.png",
+      images: [ "/Artboard 3 - 2.png", "/Artboard 3 - 3.png", "/Artboard 3 - 4.png"],
       page: "22",
       tags: {
         en: ["Die-cut Stickers", "Corporate"],
@@ -108,6 +114,7 @@ export default function PortfolioSection() {
         ar: "تصميم وتطبيق استيكرات احترافية للمركبات الترفيهية",
       },
       image: "/Artboard 6.png",
+      images: ["/Artboard 6.png", "/Artboard 6 - 2.png"],
       page: "23",
       tags: {
         en: ["Golf Cart", "Recreational"],
@@ -184,6 +191,51 @@ export default function PortfolioSection() {
     },
   ]
 
+  const projectImageCounts = useMemo(() => {
+    const counts: Record<number, number> = {}
+    projects.forEach((project) => {
+      counts[project.id] = project.images?.length ? project.images.length : 1
+    })
+    return counts
+  }, [projects])
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setGridImageIndexById((prev) => {
+        const next: Record<number, number> = { ...prev }
+        Object.keys(projectImageCounts).forEach((id) => {
+          const numericId = Number(id)
+          const count = projectImageCounts[numericId] || 1
+          if (count > 1) {
+            const current = prev[numericId] || 0
+            next[numericId] = (current + 1) % count
+          }
+        })
+        return next
+      })
+    }, 5000)
+
+    return () => clearInterval(interval)
+  }, [projectImageCounts])
+
+  useEffect(() => {
+    if (selectedProject) {
+      setActiveImageIndex(0)
+    }
+  }, [selectedProject])
+
+  useEffect(() => {
+    if (!selectedProject) return
+    const images = selectedProject.images?.length ? selectedProject.images : [selectedProject.image]
+    if (images.length <= 1) return
+
+    const interval = setInterval(() => {
+      setActiveImageIndex((idx) => (idx + 1) % images.length)
+    }, 5000)
+
+    return () => clearInterval(interval)
+  }, [selectedProject])
+
   return (
     <section
       id="portfolio"
@@ -192,25 +244,35 @@ export default function PortfolioSection() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#1a1a1a] dark:text-white mb-4">{t("portfolioTitle")}</h2>
-          <div className="relative w-50 sm:w-60 md:w-50 lg:w-70 mx-auto mb-6">
-          <div className="h-1 rounded-full bg-gradient-to-r from-[#e6ff01] via-[#f4ff4d] to-transparent blur-sm opacity-80"></div>
-          <div className="absolute inset-0 h-1 rounded-full bg-gradient-to-r from-[#e6ff01] via-[#f4ff4d] to-transparent"></div>
+          <div className="mx-auto inline-flex max-w-full flex-col items-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#1a1a1a] dark:text-white">{t("portfolioTitle")}</h2>
+            <div className="relative mt-3 h-1 w-full max-w-full mb-6">
+              <div
+                className={`h-1 rounded-full ${isRTL ? "bg-gradient-to-l" : "bg-gradient-to-r"} from-[#444638] via-[#444638] to-transparent opacity-60 blur-[2px] dark:from-[#e6ff01] dark:via-[#f4ff4d] dark:opacity-80 dark:blur-sm`}
+              ></div>
+              <div
+                className={`absolute inset-0 h-1 rounded-full ${isRTL ? "bg-gradient-to-l" : "bg-gradient-to-r"} from-[#444638] via-[#444638] to-transparent dark:from-[#e6ff01] dark:via-[#f4ff4d]`}
+              ></div>
+            </div>
           </div>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">{t("portfolioSubtitle")}</p>
         </div>
         {/* Portfolio Grid */}
-        <div className="grid md:grid-cols-3 gap-6 animate-fade-in-up">
+        <div className="grid md:grid-cols-3 gap-6 items-stretch animate-fade-in-up">
           {projects.map((project, idx) => (
             <div
               key={project.id}
               onClick={() => setSelectedProject(project)}
-              className="cursor-pointer group"
+              className="cursor-pointer group flex flex-col h-full"
               style={{ animationDelay: `${idx * 0.1}s` }}
             >
               <div className="relative overflow-hidden rounded-lg h-64 mb-4">
                 <img
-                  src={project.image || "/placeholder.svg"}
+                  src={
+                    (project.images?.length
+                      ? project.images[gridImageIndexById[project.id] || 0]
+                      : project.image) || "/placeholder.svg"
+                  }
                   alt={project.title[language]}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   loading="lazy"
@@ -225,8 +287,8 @@ export default function PortfolioSection() {
                 </div>
               </div>
               <h3 className="text-lg font-bold text-[#1a1a1a] dark:text-white mb-2">{project.title[language]}</h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400">{project.description[language]}</p>
-              <div className="flex flex-wrap gap-2 mt-3">
+              <p className="text-sm text-gray-600 dark:text-gray-400 flex-1">{project.description[language]}</p>
+              <div className="flex flex-wrap gap-2 mt-auto">
                 {project.tags[language].map((tag, i) => (
                   <span
                     key={i}
@@ -254,6 +316,59 @@ export default function PortfolioSection() {
             className="bg-white dark:bg-[#1a1a1a] rounded-lg max-w-2xl w-full animate-fade-in-up"
             onClick={(e) => e.stopPropagation()}
           >
+            {(() => {
+              const images = selectedProject.images?.length ? selectedProject.images : [selectedProject.image]
+              const safeIndex = Math.min(activeImageIndex, images.length - 1)
+              return (
+                <>
+                  <div className="relative">
+                    <img
+                      key={images[safeIndex]}
+                      src={images[safeIndex] || "/placeholder.svg"}
+                      alt={selectedProject.title[language]}
+                      className="w-full max-h-[60vh] object-contain rounded-t-lg bg-black/5 transition-opacity duration-300"
+                    />
+                    {images.length > 1 && (
+                      <>
+                        <button
+                          type="button"
+                          onClick={() =>
+                            setActiveImageIndex((idx) => (idx - 1 + images.length) % images.length)
+                          }
+                          className={`absolute top-1/2 -translate-y-1/2 ${isRTL ? "right-3" : "left-3"} rounded-full bg-black/60 px-3 py-2 text-white hover:bg-black/80 transition`}
+                          aria-label="Previous image"
+                        >
+                          ◀
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => setActiveImageIndex((idx) => (idx + 1) % images.length)}
+                          className={`absolute top-1/2 -translate-y-1/2 ${isRTL ? "left-3" : "right-3"} rounded-full bg-black/60 px-3 py-2 text-white hover:bg-black/80 transition`}
+                          aria-label="Next image"
+                        >
+                          ▶
+                        </button>
+                      </>
+                    )}
+                  </div>
+                  {images.length > 1 && (
+                    <div className="flex items-center justify-center gap-2 py-3">
+                      {images.map((_, i) => (
+                        <button
+                          key={`${selectedProject.id}-dot-${i}`}
+                          type="button"
+                          onClick={() => setActiveImageIndex(i)}
+                          className={`h-2.5 w-2.5 rounded-full transition ${
+                            i === safeIndex ? "bg-[#e6ff01]" : "bg-gray-300 dark:bg-gray-700"
+                          }`}
+                          aria-label={`Show image ${i + 1}`}
+                        />
+                      ))}
+                    </div>
+                  )}
+                </>
+              )
+            })()}
             <button
               onClick={() => setSelectedProject(null)}
               className="float-right p-2 hover:text-[#e6ff01] transition-colors"
@@ -263,12 +378,6 @@ export default function PortfolioSection() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-
-            <img
-              src={selectedProject.image || "/placeholder.svg"}
-              alt={selectedProject.title[language]}
-              className="w-full max-h-[60vh] object-contain rounded-t-lg bg-black/5"
-            />
 
             <div className="p-6">
               <h2 id="modal-title" className="text-2xl font-bold text-[#1a1a1a] dark:text-white mb-2">

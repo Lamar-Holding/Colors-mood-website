@@ -18,10 +18,16 @@ export default function AboutSection() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#1a1a1a] dark:text-white mb-4">{t("aboutTitle")}</h2>
-          <div className="relative w-40  mx-auto">
-          <div className="h-1 rounded-full bg-gradient-to-r from-[#e6ff01] via-[#f4ff4d] to-transparent blur-sm opacity-80"></div>
-          <div className="absolute inset-0 h-1 rounded-full bg-gradient-to-r from-[#e6ff01] via-[#f4ff4d] to-transparent"></div>
+          <div className="mx-auto inline-flex max-w-full flex-col items-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#1a1a1a] dark:text-white">{t("aboutTitle")}</h2>
+            <div className="relative mt-3 h-1 w-full max-w-full">
+              <div
+                className={`h-1 rounded-full ${isRTL ? "bg-gradient-to-l" : "bg-gradient-to-r"} from-[#444638] via-[#444638] to-transparent opacity-60 blur-[2px] dark:from-[#e6ff01] dark:via-[#f4ff4d] dark:opacity-80 dark:blur-sm`}
+              ></div>
+              <div
+                className={`absolute inset-0 h-1 rounded-full ${isRTL ? "bg-gradient-to-l" : "bg-gradient-to-r"} from-[#444638] via-[#444638] to-transparent dark:from-[#e6ff01] dark:via-[#f4ff4d]`}
+              ></div>
+            </div>
           </div>
         </div>
 
@@ -34,12 +40,16 @@ export default function AboutSection() {
         <div className="grid md:grid-cols-2 gap-12">
           {/* Mission & Vision Cards */}
           <div className="space-y-4 animate-slide-in-left">
-            <div className="p-5 bg-gray-50 dark:bg-gray-900 rounded-lg border-l-4 border-[#e6ff01]">
+            <div
+              className={`p-5 bg-gray-50 dark:bg-gray-900 rounded-lg border-[#444638] dark:border-[#e6ff01] ${isRTL ? "border-r-4" : "border-l-4"}`}
+            >
               <h3 className="font-bold text-[#1a1a1a] dark:text-white mb-4.5">{t("missionTitle")}</h3>
               <p className="text-sm text-gray-700 dark:text-gray-300">{t("mission")}</p>
             </div>
 
-            <div className="p-5 bg-gray-50 dark:bg-gray-900 rounded-lg border-l-4 border-[#e6ff01]">
+            <div
+              className={`p-5 bg-gray-50 dark:bg-gray-900 rounded-lg border-[#444638] dark:border-[#e6ff01] ${isRTL ? "border-r-4" : "border-l-4"}`}
+            >
               <h3 className="font-bold text-[#1a1a1a] dark:text-white mb-4.5">{t("visionTitle")}</h3>
               <p className="text-sm text-gray-700 dark:text-gray-300">{t("vision")}</p>
             </div>

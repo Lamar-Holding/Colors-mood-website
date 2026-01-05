@@ -66,10 +66,16 @@ export default function ContactSection() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#1a1a1a] dark:text-white mb-4">{t("contactTitle")}</h2>
-          <div className="relative w-45 sm:w-60 md:w-45 lg:w-60 mx-auto mb-6">
-          <div className="h-1 rounded-full bg-gradient-to-r from-[#e6ff01] via-[#f4ff4d] to-transparent blur-sm opacity-80"></div>
-          <div className="absolute inset-0 h-1 rounded-full bg-gradient-to-r from-[#e6ff01] via-[#f4ff4d] to-transparent"></div>
+          <div className="mx-auto inline-flex max-w-full flex-col items-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#1a1a1a] dark:text-white">{t("contactTitle")}</h2>
+            <div className="relative mt-3 h-1 w-full max-w-full mb-6">
+              <div
+                className={`h-1 rounded-full ${isRTL ? "bg-gradient-to-l" : "bg-gradient-to-r"} from-[#444638] via-[#444638] to-transparent opacity-60 blur-[2px] dark:from-[#e6ff01] dark:via-[#f4ff4d] dark:opacity-80 dark:blur-sm`}
+              ></div>
+              <div
+                className={`absolute inset-0 h-1 rounded-full ${isRTL ? "bg-gradient-to-l" : "bg-gradient-to-r"} from-[#444638] via-[#444638] to-transparent dark:from-[#e6ff01] dark:via-[#f4ff4d]`}
+              ></div>
+            </div>
           </div>
           <p className="text-gray-600 dark:text-gray-400">{t("contactNote")}</p>
         </div>
