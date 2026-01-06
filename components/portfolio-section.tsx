@@ -149,6 +149,7 @@ export default function PortfolioSection() {
         ar: "تصميم وتطبيق استيكرات مقصوصة على مركبات دفع رباعي بجودة عالية.",
       },
       image: "/Artboard 12.png",
+      images: ["/Artboard 12.png", "/Artboard 12 - 2.png", "/Artboard 12 - 3.png"],
       page: "27",
       tags: {
         en: ["Die-cut Stickers", "Golf Carts", "Bronco", "SUV"],
@@ -183,6 +184,7 @@ export default function PortfolioSection() {
         ar: "تنفيذ هوية مركبات متكاملة تشمل التصميم والطباعة والتركيب بما يتماشى مع الهوية البصرية.",
       },
       image: "/Artboard 13.png",
+      images: ["/Artboard 13.png", "/Artboard 13 - 2.png", "/Artboard 13 - 3.png"],
       page: "21",
       tags: {
         en: ["Vehicle Branding", "Design", "Printing"],

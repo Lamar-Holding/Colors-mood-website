@@ -48,9 +48,11 @@ export default function VehicleSection() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in-up">
-          <div className="mx-auto inline-flex max-w-full flex-col items-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#1a1a1a] dark:text-white">{t("vehicleTitle")}</h2>
-            <div className="relative mt-3 h-1 w-full max-w-full mb-6">
+          <div className="mx-auto inline-flex w-fit flex-col items-center">
+            <h2 className="inline-block text-4xl md:text-5xl font-bold text-[#1a1a1a] dark:text-white">
+              {t("vehicleTitle")}
+            </h2>
+            <div className="relative mt-3 h-1 w-full mb-6 scale-x-80 sm:scale-x-100">
               <div
                 className={`h-1 rounded-full ${isRTL ? "bg-gradient-to-l" : "bg-gradient-to-r"} from-[#444638] via-[#444638] to-transparent opacity-60 blur-[2px] dark:from-[#e6ff01] dark:via-[#f4ff4d] dark:opacity-80 dark:blur-sm`}
               ></div>

@@ -49,6 +49,21 @@ export default function Footer() {
                   {t("serviceSignage")}
                 </a>
               </li>
+              <li>
+                <a href="#services" className="hover:text-[#e6ff01] transition">
+                  {t("serviceStickers")}
+                </a>
+              </li>
+              <li>
+                <a href="#services" className="hover:text-[#e6ff01] transition">
+                  {t("serviceVehicleGraphics")}
+                </a>
+              </li>
+              <li>
+                <a href="#services" className="hover:text-[#e6ff01] transition">
+                  {t("serviceVehicleDecals")}
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -59,6 +74,21 @@ export default function Footer() {
               <li>
                 <a href="#about" className="hover:text-[#e6ff01] transition">
                   {t("aboutTitle")}
+                </a>
+              </li>
+              <li>
+                <a href="#services" className="hover:text-[#e6ff01] transition">
+                  {t("navServices")}
+                </a>
+              </li>
+              <li>
+                <a href="#vehicle" className="hover:text-[#e6ff01] transition">
+                  {t("vehicleTitle")}
+                </a>
+              </li>
+              <li>
+                <a href="#capabilities" className="hover:text-[#e6ff01] transition">
+                  {t("capabilitiesTitle")}
                 </a>
               </li>
               <li>
