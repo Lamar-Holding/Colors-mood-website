@@ -34,7 +34,7 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="relative w-full aspect-[16/9] h-auto sm:aspect-auto sm:min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-[#1a1a1a] to-black"
+      className="relative w-full aspect-[16/9] h-auto sm:aspect-auto sm:min-h-screen flex items-center justify-center overflow-hidden bg-white sm:bg-gradient-to-br sm:from-gray-900 sm:via-[#1a1a1a] sm:to-black dark:bg-gradient-to-br dark:from-gray-900 dark:via-[#1a1a1a] dark:to-black"
     >
       {/* Background GIF */}
       <div className="absolute inset-0 bg-black">

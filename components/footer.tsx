@@ -61,7 +61,7 @@ export default function Footer() {
               </li>
               <li>
                 <a href="#services" className="hover:text-[#e6ff01] transition">
-                  {t("serviceVehicleDecals")}
+                  {t("servicesProducts")}
                 </a>
               </li>
             </ul>
