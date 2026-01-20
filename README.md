@@ -1,277 +1,160 @@
-# Colors Mood - Creative Printing & Vehicle Wrapping Solutions
+# Colors Mood Website
 
-A modern, responsive Next.js website for Colors Mood Printing Solutions, a Saudi Arabian company specializing in vehicle wraps, advertising printing, and commercial branding.
+A modern, responsive Next.js website for Colors Mood Printing Solutions (Saudi Arabia), focused on vehicle wraps, advertising printing, and commercial branding.
 
-## Features
+## Highlights
 
-✨ **Bilingual Support**: Full English & Arabic (RTL) support with persistent language toggle
-🌙 **Dark Mode**: Complete dark/light theme support with local persistence
-📱 **Responsive Design**: Mobile-first responsive design for all devices
-🎨 **Modern UI**: Clean, professional design with smooth animations
-📧 **Contact Form**: Functional contact form with server-side validation
-🖼️ **Portfolio Gallery**: Showcase of past projects with lightbox modals
-💰 **Pricing Table**: Clear pricing information for services
-♿ **Accessible**: WCAG compliant with semantic HTML and ARIA labels
+- 🌍 Bilingual English/Arabic experience with automatic RTL support
+- 🌓 Light/dark theme toggle with persisted preference
+- 🖼️ Portfolio grid with modal gallery and image carousel
+- ✉️ Contact form backed by a Next.js API route (in-memory store by default)
+- ♿ Accessibility touches (skip link, ARIA labels)
+- 💡 Pricing section exists but is currently disabled in the UI (commented out in `app/page.tsx` and `components/header.tsx`)
 
 ## Tech Stack
 
-- **Framework**: Next.js 15+ (App Router)
-- **Styling**: Tailwind CSS v4
-- **Language**: TypeScript
-- **Fonts**: Cairo (Arabic), Poppins (English)
-- **Hosting**: Vercel (recommended)
+- ⚛️ Next.js 16 (App Router)
+- 🧩 React 19 + TypeScript
+- 🎨 Tailwind CSS v4
+- 🧱 Radix UI primitives (in `components/ui`)
+- ✅ Jest for tests
 
-## Getting Started
+## Requirements
 
-### Prerequisites
+- 🧰 Node.js 18+
+- 📦 npm, pnpm, or yarn
 
-- Node.js 18+
-- npm or yarn
+## Quick Start
 
-### Installation
-
-\`\`\`bash
-# Clone the repository
-git clone <your-repo-url>
-cd colors-mood
-
-# Install dependencies
+```bash
+git clone <(https://github.com/Lamar-Holding/Colors-mood-website)>
+cd colors-mood-website
 npm install
-
-# Create .env.local file
 cp .env.example .env.local
-
-# Run development server
 npm run dev
-\`\`\`
+```
 
-Open [http://localhost:3000](http://localhost:3000) to see the result.
+Open `http://localhost:3000`.
+
+## Scripts
+
+- ▶️ `npm run dev` - start the development server
+- 🏗️ `npm run build` - build for production
+- 🚀 `npm run start` - run the production server
+- 🧹 `npm run lint` - run ESLint
+- 🧪 `npm run test` - run Jest tests
+- 🧪 `npm run test:api` - run API tests only
+- 🔍 `npm run validate` - run site validation script
 
 ## Environment Variables
 
-Create a `.env.local` file with:
+The contact API works without external services. If you want real email sending, set these variables and enable the nodemailer block in `app/api/contact/route.ts`.
 
-\`\`\`env
-# Optional: For email functionality
+```env
 SMTP_HOST=smtp.gmail.com
 SMTP_PORT=587
 SMTP_USER=your-email@gmail.com
 SMTP_PASS=your-app-password
 FROM_EMAIL=noreply@colorsmood.com
 TO_EMAIL=Sales.dept@colorsmood.com.sa
-\`\`\`
+```
 
 ## Project Structure
 
-\`\`\`
-colors-mood/
+```
+colors-mood-website/
 ├── app/
-│   ├── api/contact/route.ts       # Contact form API endpoint
-│   ├── layout.tsx                 # Root layout
-│   ├── globals.css                # Global styles
-│   └── page.tsx                   # Main page
+│   ├── api/contact/route.ts     # Contact form API
+│   ├── globals.css              # Global styles
+│   ├── layout.tsx               # Root layout and fonts
+│   └── page.tsx                 # Main page sections
 ├── components/
-│   ├── header.tsx                 # Sticky header with navigation
-│   ├── hero-section.tsx           # Hero banner
-│   ├── about-section.tsx          # About company
-│   ├── services-section.tsx       # Services overview
-│   ├── vehicle-section.tsx        # Vehicle branding section
-│   ├── capabilities-section.tsx   # Production capabilities
-│   ├── pricing-section.tsx        # Pricing table
-│   ├── portfolio-section.tsx      # Project gallery
-│   ├── contact-section.tsx        # Contact form
-│   └── footer.tsx                 # Footer
+│   ├── about-section.tsx
+│   ├── accessibility-widget.tsx
+│   ├── animation-wrapper.tsx
+│   ├── capabilities-section.tsx
+│   ├── contact-section.tsx
+│   ├── footer.tsx
+│   ├── header.tsx
+│   ├── hero-section.tsx
+│   ├── portfolio-section.tsx
+│   ├── pricing-section.tsx      # Present but disabled in UI
+│   ├── scroll-indicator.tsx
+│   ├── services-section.tsx
+│   ├── theme-provider.tsx
+│   ├── vehicle-section.tsx
+│   └── ui/                      # Reusable UI primitives (Radix-based)
 ├── hooks/
-│   ├── use-language.ts            # Language switcher hook
-│   └── use-theme.ts               # Dark mode hook
+│   ├── use-language.tsx
+│   ├── use-mobile.ts
+│   ├── use-theme.ts
+│   └── use-toast.ts
 ├── lib/
-│   └── i18n.ts                    # Translation utilities
+│   ├── i18n.ts                   # Translation utilities
+│   └── utils.ts
 ├── locales/
-│   ├── en.json                    # English translations
-│   └── ar.json                    # Arabic translations
-└── public/
-    └── placeholder.svg            # Placeholder images
-\`\`\`
+│   ├── en.json                   # English strings
+│   └── ar.json                   # Arabic strings
+├── public/                       # Static images, logos, PDFs
+├── scripts/
+│   └── validate-site.ts
+├── styles/
+│   └── globals.css               # Additional Tailwind theme tokens
+├── Docs/                         # Delivery, deployment, and feature docs
+├── __tests__/                    # Jest tests
+├── next.config.mjs
+├── package.json
+└── tsconfig.json
+```
 
-## Key Features
+## Updating Content
 
-### Bilingual Support
-- Seamless language switching between English and Arabic
-- RTL layout automatically applied for Arabic
-- Persisted language preference in localStorage
+- 📝 Text and labels: `locales/en.json` and `locales/ar.json`
+- 🖼️ Portfolio items: `components/portfolio-section.tsx`
+- 🧩 Section layouts: files in `components/`
+- 🎛️ Global styles: `app/globals.css`
 
-### Dark Mode
-- Toggle between light and dark themes
-- Persisted theme preference
-- Smooth transitions between themes
+## API
 
-### Responsive Navigation
-- Sticky header with active section highlighting
-- Mobile hamburger menu
-- Smooth scroll to sections
+### POST `/api/contact`
 
-### Contact Form
-- Client-side and server-side validation
-- Email address validation
-- Success/error feedback messages
-- In-memory message storage (ready for database integration)
+Accepts contact form submissions.
 
-### Portfolio Gallery
-- Grid layout with hover effects
-- Lightbox modal for project details
-- Project tags and categorization
-- PDF page references for each project
-
-## Building for Production
-
-\`\`\`bash
-npm run build
-npm start
-\`\`\`
-
-## Deployment
-
-### Deploy to Vercel
-
-\`\`\`bash
-# Install Vercel CLI
-npm i -g vercel
-
-# Deploy
-vercel
-
-# Set environment variables in Vercel dashboard
-\`\`\`
-
-Environment variables to set in Vercel:
-- `SMTP_HOST`
-- `SMTP_PORT`
-- `SMTP_USER`
-- `SMTP_PASS`
-- `FROM_EMAIL`
-- `TO_EMAIL`
-
-## API Routes
-
-### POST /api/contact
-Handles contact form submissions.
-
-**Request:**
-\`\`\`json
+```json
 {
   "name": "John Doe",
   "email": "john@example.com",
   "message": "I'd like a quote for...",
   "lang": "en"
 }
-\`\`\`
+```
 
-**Response:**
-\`\`\`json
+### GET `/api/contact`
+
+Returns in-memory submissions for review.
+
+```json
 {
   "ok": true,
-  "message": "Message received"
+  "messages": [],
+  "count": 0
 }
-\`\`\`
-
-### GET /api/contact
-Retrieves all contact submissions (for admin review).
-
-**Response:**
-\`\`\`json
-{
-  "ok": true,
-  "messages": [...],
-  "count": 5
-}
-\`\`\`
-
-## Customization
-
-### Updating Content
-
-Edit translation files to update text:
-- `locales/en.json` - English content
-- `locales/ar.json` - Arabic content
-
-### Changing Colors
-
-Edit color variables in `app/globals.css`:
-\`\`\`css
---color-primary: #1a1a1a;
---color-accent: #d4af37;
-\`\`\`
-
-### Updating Images
-
-Replace placeholder images in components with your actual images or images from the PDF:
-
-\`\`\`tsx
-<img
-  src="/images/your-image.jpg"
-  alt="Description"
-  className="w-full h-full object-cover"
-/>
-\`\`\`
+```
 
 ## Testing
 
-### Manual Testing
-- Test language switching (EN/AR)
-- Verify dark/light mode persistence
-- Test responsive design on mobile/tablet/desktop
-- Submit contact form and verify validation
+```bash
+npm run test
+npm run test:api
+npm run validate
+```
 
-### Contact Form API Test
-\`\`\`bash
-curl -X POST http://localhost:3000/api/contact \
-  -H "Content-Type: application/json" \
-  -d '{"name":"Test","email":"test@example.com","message":"Test message","lang":"en"}'
-\`\`\`
+## Deployment
 
-## Email Setup (Optional)
-
-To enable real email sending, install nodemailer:
-
-\`\`\`bash
-npm install nodemailer
-\`\`\`
-
-Then uncomment the email code in `/app/api/contact/route.ts` and configure SMTP variables.
-
-## Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-
-## Performance
-
-- ⚡ Optimized images with Next.js Image component
-- 🚀 Server-side rendering for SEO
-- 📦 Efficient code splitting
-- 🎯 Lighthouse score optimization
-
-## SEO
-
-- Meta tags for title and description
-- Lang attributes for bilingual support
-- Semantic HTML structure
-- Structured data ready for schema.org
-
-## License
-
-© 2025 Colors Mood Printing Solutions. All rights reserved.
+Vercel is recommended. See `Docs/DEPLOYMENT.md` or `Docs/GITHUB_VERCEL_DEPLOYMENT.md` for step-by-step instructions.
 
 ## Support
 
-For issues or questions:
-- Email: Sales.dept@colorsmood.com.sa
-- Phone: +966544927409
-- Location: AlUla, Madinah Region, Saudi Arabia
-
-## Source Attribution
-
-- Company profile: Colors Mood - Profile Arabic (2024-2025)
-- Content and images sourced from official company documentation
+- 📧 Email: Sales.dept@colorsmood.com.sa
+- 📞 Phone: +966544927409
+- 📍 Location: AlUla, Madinah Region, Saudi Arabia
