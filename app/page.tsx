@@ -6,7 +6,7 @@ import AboutSection from "@/components/about-section"
 import ServicesSection from "@/components/services-section"
 import VehicleSection from "@/components/vehicle-section"
 import CapabilitiesSection from "@/components/capabilities-section"
-import PricingSection from "@/components/pricing-section"
+// import PricingSection from "@/components/pricing-section"
 import PortfolioSection from "@/components/portfolio-section"
 import ContactSection from "@/components/contact-section"
 import Footer from "@/components/footer"
@@ -43,7 +43,7 @@ export default function Home() {
       <ServicesSection />
       <VehicleSection />
       <CapabilitiesSection />
-      <PricingSection />
+      {/* <PricingSection /> */}
       <PortfolioSection />
       <ContactSection />
       <Footer />

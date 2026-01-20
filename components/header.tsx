@@ -14,7 +14,16 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["home", "about", "services", "vehicle", "capabilities", "pricing", "portfolio", "contact"]
+      const sections = [
+        "home",
+        "about",
+        "services",
+        "vehicle",
+        "capabilities",
+        // "pricing",
+        "portfolio",
+        "contact",
+      ]
       const currentSection = sections.find((section) => {
         const element = document.getElementById(section)
         if (element) {
@@ -41,7 +50,7 @@ export default function Header() {
     { id: "services", label: t("navServices") },
     { id: "vehicle", label: t("navVehicle") },
     { id: "capabilities", label: t("navCapabilities") },
-    { id: "pricing", label: t("navPricing") },
+    // { id: "pricing", label: t("navPricing") },
     { id: "portfolio", label: t("navPortfolio") },
     { id: "contact", label: t("navContact") },
   ]

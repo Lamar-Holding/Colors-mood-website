@@ -16,7 +16,6 @@ interface PortfolioItem {
   }
   image: string
   images?: string[]
-  page: string
   tags: {
     en: string[]
     ar: string[]
@@ -44,7 +43,6 @@ export default function PortfolioSection() {
       },
       image: "/Artboard 2.png",
       images: ["/Artboard 2.png", "/Artboard 2 - 2.png", "/Artboard 2 - 3.png", "/Artboard 2 - 4.png"],
-      page: "18-19",
       tags: {
         en: ["Vehicle Wrap", "Government", "Events"],
         ar: ["تغليف مركبات", "حكومي", "فعاليات"],
@@ -62,7 +60,6 @@ export default function PortfolioSection() {
       },
       image: "/Artboard 4.png",
       images: ["/Artboard 4.png", "/Artboard 4 - 2.png"],
-      page: "20",
       tags: {
         en: ["Bus Wrap", "Cultural", "Professional"],
         ar: ["تغليف حافلات", "تراثي", "احترافي"],
@@ -79,7 +76,6 @@ export default function PortfolioSection() {
         ar: "تنفيذ تغليف كامل لأسطول نقل",
       },
       image: "/Artboard 5.png",
-      page: "21",
       tags: {
         en: ["Fleet Branding", "Transport"],
         ar: ["هوية الأسطول", "نقل"],
@@ -97,7 +93,6 @@ export default function PortfolioSection() {
       },
       image: "/Artboard 3 - 2.png",
       images: [ "/Artboard 3 - 2.png", "/Artboard 3 - 3.png", "/Artboard 3 - 4.png"],
-      page: "22",
       tags: {
         en: ["Die-cut Stickers", "Corporate"],
         ar: ["استيكرات مقصوصة", "شركات"],
@@ -115,7 +110,6 @@ export default function PortfolioSection() {
       },
       image: "/Artboard 6.png",
       images: ["/Artboard 6.png", "/Artboard 6 - 2.png"],
-      page: "23",
       tags: {
         en: ["Golf Cart", "Recreational"],
         ar: ["عربة جولف", "ترفيهي"],
@@ -132,7 +126,6 @@ export default function PortfolioSection() {
         ar: "لافتات داخلية وطباعة شعارات مخصصة للمطاعم",
       },
       image: "/Artboard 7.png",
-      page: "24",
       tags: {
         en: ["Interior", "Signage", "Restaurant"],
         ar: ["داخلي", "لافتات", "مطعم"],
@@ -150,7 +143,6 @@ export default function PortfolioSection() {
       },
       image: "/Artboard 12.png",
       images: ["/Artboard 12.png", "/Artboard 12 - 2.png", "/Artboard 12 - 3.png"],
-      page: "27",
       tags: {
         en: ["Die-cut Stickers", "Golf Carts", "Bronco", "SUV"],
         ar: ["استيكرات مقصوصة", "عربات جولف", "برونكو", "دفع رباعي"],
@@ -167,7 +159,6 @@ export default function PortfolioSection() {
         ar: "تطبيق استيكرات عالية الجودة على مركبات برونكو، بما في ذلك التصميم والطباعة والتركيب.",
       },
       image: "/Artboard 14.png",
-      page: "23",
       tags: {
         en: ["Bronco", "Stickers", "Installation"],
         ar: ["برونكو", "استيكر", "تركيب"],
@@ -185,7 +176,6 @@ export default function PortfolioSection() {
       },
       image: "/Artboard 13.png",
       images: ["/Artboard 13.png", "/Artboard 13 - 2.png", "/Artboard 13 - 3.png"],
-      page: "21",
       tags: {
         en: ["Vehicle Branding", "Design", "Printing"],
         ar: ["هوية مركبات", "تصميم", "طباعة"],
@@ -385,11 +375,6 @@ export default function PortfolioSection() {
               <h2 id="modal-title" className="text-2xl font-bold text-[#1a1a1a] dark:text-white mb-2">
                 {selectedProject.title[language]}
               </h2>
-              <p className="mb-4 text-sm">
-                <span className="inline-flex items-center rounded-md bg-[#e6ff01] px-2 py-1 text-[#0f0f0f]">
-                  {t("portfolioSourceNote")} — Page {selectedProject.page}
-                </span>
-              </p>
               <p className="text-gray-700 dark:text-gray-300 mb-4">{selectedProject.description[language]}</p>
               <div className="flex flex-wrap gap-2">
                 {selectedProject.tags[language].map((tag, i) => (
