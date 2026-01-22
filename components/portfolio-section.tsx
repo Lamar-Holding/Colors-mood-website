@@ -181,6 +181,23 @@ export default function PortfolioSection() {
         ar: ["هوية مركبات", "تصميم", "طباعة"],
       },
     },
+    {
+      id: 10,
+      title: {
+        en: "Event Buggy Stickers",
+        ar: "استيكرات عربات الفعاليات",
+      },
+      description: {
+        en: "Custom die-cut stickers for event vehicles, including design, printing, and installation.",
+        ar: "استيكرات مقصوصة مخصصة لسيارات الفعاليات، بما في ذلك التصميم والطباعة والتركيب.",
+      },
+      image: "/Buggy2.png",
+      images: ["/Buggy2.png", "/Buggy1.png", "/Buggy3.png"],
+      tags: {
+        en: ["Event Vehicles", "Die-cut Stickers"],
+        ar: ["عربات الفعاليات", "استيكرات مقصوصة"],
+      },
+    },
   ]
 
   const projectImageCounts = useMemo(() => {
