@@ -184,12 +184,12 @@ export default function PortfolioSection() {
     {
       id: 10,
       title: {
-        en: "Event Buggy Stickers",
-        ar: "استيكرات عربات الفعاليات",
+        en: "The Summit Journey Company",
+        ar: "شركة قمة الرحلة لتنظيم الرحلات",
       },
       description: {
-        en: "Custom die-cut stickers for event vehicles, including design, printing, and installation.",
-        ar: "استيكرات مقصوصة مخصصة لسيارات الفعاليات، بما في ذلك التصميم والطباعة والتركيب.",
+        en: "Printing and installation of custom stickers for Buggy vehicles Custom Stickers - Printing -Installation",
+        ar: "قمة الرحلة طباعة وتركيب استيكر مخصص لمركبات الـبجي استيكر مخصص -  طباعة - تركيب",
       },
       image: "/Buggy2.png",
       images: ["/Buggy2.png", "/Buggy1.png", "/Buggy3.png"],
