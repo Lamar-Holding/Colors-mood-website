@@ -43,8 +43,8 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "/placeholder.svg?key=favicon",
-        type: "image/svg+xml",
+        url: "/Dark%20Mood%20Logo.png",
+        type: "image/png",
       },
     ],
   },

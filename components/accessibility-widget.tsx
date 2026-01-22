@@ -5,7 +5,7 @@ import { useLanguage } from "@/hooks/use-language"
 export default function AccessibilityWidget() {
   const { language } = useLanguage()
   const isRTL = language === "ar"
-  const whatsappLink = "https://wa.me/966544927409"
+  const whatsappLink = "https://wa.me/966566315522"
 
   return (
     <div className={`fixed bottom-6 ${isRTL ? "left-6" : "right-6"} z-40`}>
